@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+
+<link rel="icon" type="image/png" href="assets/FAVICON%20WEB%20DESKTPP%20LAVAPOPO.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Mulish:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  section[id] {
+    scroll-margin-top: 92px;
+  }
+
+  @keyframes lpFloat {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-16px);
+    }
+  }
+
+  input[type="range"].lp-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    outline: none;
+    cursor: pointer;
+  }
+
+  input[type="range"].lp-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #0BA9C2;
+    border: 5px solid #fff;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.32);
+  }
+
+  input[type="range"].lp-range::-moz-range-thumb {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #0BA9C2;
+    border: 5px solid #fff;
+    cursor: pointer;
+  }
+
+  .lp-navlinks {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .lp-burger {
+    display: none;
+  }
+
+  @media (max-width: 1000px) {
+    .lp-navlinks {
+      display: none;
+    }
+
+    .lp-burger {
+      display: inline-flex !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #tech .tech-grid {
+      grid-template-columns: 1fr !important;
+      gap: 22px !important;
+    }
+
+    #tech .tech-card {
+      height: auto !important;
+      min-height: 330px;
+    }
+  }
+
+
+
+</style>
+
+</head>
+<body>
+<div style="--accent:#0BA9C2;font-family:'Mulish',sans-serif;color:#0F2227;background:#ffffff;overflow-x:hidden;-webkit-font-smoothing:antialiased" id="top">
+
+ 
+ <nav id="mainNav" style="position:fixed;top:0;left:0;right:0;width:100%;z-index:9999;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(15,34,39,0.08);transition:transform 0.35s ease, opacity 0.35s ease;transform:translateY(0);opacity:1">
+    <div style="max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+      <a href="#top" style="display:flex;align-items:center;flex:none"><img src="assets/logo-primario.png" alt="Lavapopo" style="height:54px;width:auto;display:block"></a>
+      <div class="lp-navlinks">
+<a href="#manualdeinstalacion" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Instalación</a>
+<a href="#how" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Funcionamiento</a>
+<a href="#features" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Beneficios</a>
+<a href="#compat" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Compatibilidad</a>
+<a href="#reviews" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Clientes</a>
+<a href="#calculator" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Calculadora</a>
+<a href="#specs" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Especificaciones</a>
+<a href="#faq" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">FAQ</a>
+<a href="#pricing" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Precios</a>
+<a href="#contact" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Contacto</a>
+<a href="https://wa.me/51945670438?text=Hola%20Lavapopo%2C%20quiero%20comprar%20mi%20Lavapopo." style="text-decoration:none;background:#0BA9C2;color:#fff;font-weight:800;font-size:14.5px;padding:11px 20px;border-radius:999px;box-shadow:0 6px 16px rgba(11,169,194,0.32)">Quiero el mío</a>
+      </div>
+      <button class="lp-burger" id="burgerBtn" style="border:1.5px solid rgba(15,34,39,0.16);background:#fff;border-radius:12px;width:46px;height:46px;align-items:center;justify-content:center;cursor:pointer;font-size:20px;color:#0F2227">☰</button>
+    </div>
+    <div id="mobileNav" style="display:none;border-top:1px solid rgba(15,34,39,0.08);background:#fff;padding:14px 24px">
+      <div style="display:flex;flex-direction:column;gap:6px">
+ <a href="#manualdeinstalacion" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Manual de Instalación</a>
+  <a href="#how" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Cómo funciona</a>
+  <a href="#features" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Beneficios</a>
+  <a href="#compat" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Compatibilidad</a>
+  <a href="#reviews" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Reseñas reales</a>
+  <a href="#calculator" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Calculadora</a>
+  <a href="#specs" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Especificaciones</a>
+  <a href="#faq" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Preguntas frecuentes</a>
+  <a href="#pricing" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Precios</a>
+  <a href="#contact" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Contacto</a>
+        <a href="https://wa.me/51945670438?text=Hola%20Lavapopo%2C%20quiero%20comprar%20mi%20Lavapopo." style="text-decoration:none;background:#0BA9C2;color:#fff;font-weight:800;text-align:center;padding:13px;border-radius:999px;margin-top:6px">Quiero el mío</a>
+      </div>
+    </div>
+  </nav>
+  <div style="height:79px"></div>
+
+
+  <!-- HERO -->
+  <header style="background:#0BA9C2;color:#fff;position:relative;overflow:hidden">
+    <div style="max-width:1200px;margin:0 auto;padding:72px 24px 84px;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:48px;align-items:center">
+      <div>
+        <div style="display:inline-block;background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.3);padding:7px 16px;border-radius:999px;font-weight:700;font-size:13.5px;letter-spacing:0.02em;margin-bottom:24px">💩 Sí, vamos a hablar de eso.</div>
+        <h1 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(38px,5.4vw,62px);line-height:1.02;margin:0 0 22px;letter-spacing:-0.02em">Llevas 30 años limpiándote <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0F2227">mal</em>. No es tu culpa.</h1>
+        <p style="font-size:18.5px;line-height:1.6;max-width:540px;margin:0 0 32px;color:rgba(255,255,255,0.94)">El papel seco no limpia: solo embarra. El agua sí. Lavapopo se instala en tu inodoro en <strong>5 minutos</strong>, funciona sin electricidad y le devuelve a tu trasero la dignidad que el papel le quitó. Sin obras, sin gasfitero, sin dramas.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="https://wa.me/51945670438?text=Hola%20Lavapopo%2C%20quiero%20comprar%20mi%20Lavapopo." style="text-decoration:none;background:#0F2227;color:#fff;font-weight:800;font-size:16px;padding:16px 28px;border-radius:999px;box-shadow:0 10px 26px rgba(15,34,39,0.28)">Quiero el mío · S/ 140</a>
+          <a href="#how" style="text-decoration:none;background:rgba(255,255,255,0.14);border:1.5px solid rgba(255,255,255,0.55);color:#fff;font-weight:700;font-size:16px;padding:16px 28px;border-radius:999px">Ver cómo funciona</a>
+        </div>
+        <div style="display:flex;gap:34px;flex-wrap:wrap;margin-top:42px">
+          <div><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:30px;line-height:1">15 min</div><div style="font-size:14px;opacity:0.9;margin-top:3px">De instalación</div></div>
+          <div style="width:1px;background:rgba(255,255,255,0.28)"></div>
+          <div><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:30px;line-height:1">0 watts</div><div style="font-size:14px;opacity:0.9;margin-top:3px">Sin electricidad</div></div>
+          <div style="width:1px;background:rgba(255,255,255,0.28)"></div>
+          <div><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:30px;line-height:1">S/ 700+</div><div style="font-size:14px;opacity:0.9;margin-top:3px">Ahorro al año</div></div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;align-items:center">
+        <img src="assets/product-detail.png" alt="Lavapopo bidé de mano" style="width:100%;max-width:680px;height:auto;animation:lpFloat 6s ease-in-out infinite;filter:drop-shadow(0 22px 45px rgba(15,34,39,0.28))">
+      </div>
+    </div>
+  </header>
+
+  <!-- VIDEO + PROOF -->
+  <section id="manualdeinstalacion" style="background:#FAF6EE;padding:84px 24px">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:44px;align-items:center">
+      <div>
+        <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">Instalación · 1:20</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(28px,3.4vw,40px);line-height:1.08;margin:0 0 16px;letter-spacing:-0.02em">Instálalo tu mismo.</h2>
+        <p style="font-size:17px;line-height:1.6;color:#4a5a5e;margin:0">Instalación paso a paso, sin gasfitero y sin obras. Mira el video y comprueba lo fácil que es jubilar el papel.</p>
+      </div>
+      <div style="border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(15,34,39,0.16);background:#0F2227">
+     
+   
+
+       <div style="border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(15,34,39,0.16);background:#0F2227">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/xrm1iYwowf8?si=_K0Hg8Xw9JIFO1Nz"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          style="display:block;height:350px;width:100%;border:0">
+        </iframe>
+      </div>
+
+
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:56px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px">
+      <div style="background:#fff;border-radius:18px;padding:26px;text-align:center;border:1px solid rgba(15,34,39,0.07)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:34px;color:#0BA9C2">+5,000</div><div style="color:#4a5a5e;font-weight:600;margin-top:4px">Poperos exigentes 💩</div></div>
+      <div style="background:#fff;border-radius:18px;padding:26px;text-align:center;border:1px solid rgba(15,34,39,0.07)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:34px;color:#0BA9C2">4.9/5</div><div style="color:#4a5a5e;font-weight:600;margin-top:4px">Estrellas reales</div></div>
+      <div style="background:#fff;border-radius:18px;padding:26px;text-align:center;border:1px solid rgba(15,34,39,0.07)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:34px;color:#0BA9C2">15 min</div><div style="color:#4a5a5e;font-weight:600;margin-top:4px">Instalación promedio</div></div>
+      <div style="background:#fff;border-radius:18px;padding:26px;text-align:center;border:1px solid rgba(15,34,39,0.07)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:34px;color:#0BA9C2">1 año</div><div style="color:#4a5a5e;font-weight:600;margin-top:4px">Garantía oficial</div></div>
+    </div>
+  </section>
+
+
+
+<!-- COMO FUNCIONA -->
+<section id="how" style="background:#fff;padding:96px 24px">
+
+  <div style="max-width:1200px;margin:0 auto">
+
+    <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">
+      01 · Cómo funciona
+    </div>
+
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;max-width:760px;letter-spacing:-0.02em">
+      Usarlo es más fácil que  
+      <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">
+        desenrollar el papel higiénico
+      </em>.
+    </h2>
+
+    <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:640px;margin:0 0 48px">
+      Te sientas, haces lo que tengas que hacer. Giras la perilla. Te lavas el trasero (spolier: puedes continuar escroleando tiktok mientras te limpias, tus manos están libres). 
+      	Al finalizar cierras la perilla, coges un sólo pedazo de papel y te secas el agua residual. Fin del asunto.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px">
+
+      <!-- INICIO FICHA 01 -->
+      <div style="background:#FAF6EE;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.06)">
+
+        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.1em;color:#0BA9C2;margin-bottom:14px">
+          PASO 01
+        </div>
+
+        <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;margin:0 0 10px;line-height:1.2">
+          Sientate en el inodoro como siempre.
+        </h3>
+
+        <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">
+          Sientate y haz tus necesidades como siempre lo haces, Lavapopo no te quita espacio, ni siquiera vas a sentir su presencia hasta terminar .
+        </p>
+
+      </div>
+      <!-- FIN FICHA 01 -->
+
+
+      <!-- INICIO FICHA 02 -->
+      <div style="background:#FAF6EE;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.06)">
+
+        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.1em;color:#0BA9C2;margin-bottom:14px">
+          PASO 02
+        </div>
+
+        <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;margin:0 0 10px;line-height:1.2">
+          Límpiate con agua.
+        </h3>
+
+        <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">
+          Cuando sientas que ya terminaste, giras la perilla de Lavapopo y vas aumentando gradualmente la cantidad de agua con el giro de la perilla. Sentirás el chorro de agua suave en tu trasero justo en el punto donde se necesita limpieza.
+        </p>
+
+      </div>
+      <!-- FIN FICHA 02 -->
+
+
+      <!-- INICIO FICHA 03 -->
+      <div style="background:#FAF6EE;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.06)">
+
+        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.1em;color:#0BA9C2;margin-bottom:14px">
+          PASO 03
+        </div>
+
+        <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;margin:0 0 10px;line-height:1.2">
+          Mueve un poco tu trasero. 
+        </h3>
+
+        <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">
+          Puedes mover un poco tu trasero, sin tener que levantarte del inodoro si necesitas que te limpie algunas zonas aledañas al centro del asunto.
+        </p>
+
+      </div>
+      <!-- FIN FICHA 03 -->
+
+
+      <!-- INICIO FICHA 04 -->
+      <div style="background:#FAF6EE;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.06)">
+
+        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.1em;color:#0BA9C2;margin-bottom:14px">
+          PASO 04
+        </div>
+
+        <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;margin:0 0 10px;line-height:1.2">
+          Cierra la perilla. Sécate. Listo!
+        </h3>
+
+        <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">
+          Gira la perilla para cerrar el agua. Coge un sólo pedazo de papel higiénico y sécate las gotas de agua que pueden haber quedado en tu trasero. Listo ya terminaste. Tu trasero te lo agradecerá.
+        </p>
+
+      </div>
+      <!-- FIN FICHA 04 -->
+
+    </div>
+
+  </div>
+
+</section>
+<!-- FIN COMO FUNCIONA -->
+```
+
+  <!-- BENEFICIOS -->
+  <section id="features" style="background:#FAF6EE;padding:96px 24px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">02 · Beneficios</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;max-width:700px;letter-spacing:-0.02em">Diseñado para <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">poperos exigentes</em>.</h2>
+      <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:660px;margin:0 0 48px">Lavapopo no necesita enchufes, baterías, productos químicos ni curso de uso. Solo agua de tu red, una perilla y un trasero dispuesto a evolucionar. El papel cumplió. Es hora de jubilarlo.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
+        <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.07)">
+          <div style="width:46px;height:46px;border-radius:13px;background:rgba(11,169,194,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><span style="width:16px;height:16px;border-radius:5px;background:#0BA9C2;display:block"></span></div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 10px;line-height:1.25">Cero enchufes, cero baterías</h3>
+          <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">Funciona con la presión del agua que ya tienes en casa. Si tu inodoro carga, Lavapopo limpia.</p>
+        </div>
+        <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.07)">
+          <div style="width:46px;height:46px;border-radius:13px;background:rgba(11,169,194,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><span style="width:16px;height:16px;border-radius:5px;background:#0BA9C2;display:block"></span></div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 10px;line-height:1.25">La boquilla se limpia sola</h3>
+          <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">Antes y después de cada uso, agua corre por la boquilla. Tú no tocas nada. Higiene de hospital.</p>
+        </div>
+        <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.07)">
+          <div style="width:46px;height:46px;border-radius:13px;background:rgba(11,169,194,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><span style="width:16px;height:16px;border-radius:5px;background:#0BA9C2;display:block"></span></div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 10px;line-height:1.25">Tú mandas en la presión</h3>
+          <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">Una perilla. Suave para los niños, firme para los adultos exigentes. El agua hace el resto.</p>
+        </div>
+        <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.07)">
+          <div style="width:46px;height:46px;border-radius:13px;background:rgba(11,169,194,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><span style="width:16px;height:16px;border-radius:5px;background:#0BA9C2;display:block"></span></div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 10px;line-height:1.25">Sin llamar al gasfitero</h3>
+          <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">Una llave inglesa y un desarmador, 5 minutos. Si te aburres a mitad, lo terminas mañana. Es así de fácil.</p>
+        </div>
+        <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.07)">
+          <div style="width:46px;height:46px;border-radius:13px;background:rgba(11,169,194,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><span style="width:16px;height:16px;border-radius:5px;background:#0BA9C2;display:block"></span></div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 10px;line-height:1.25">Agua, no papel</h3>
+          <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">Sin químicos, sin papel, sin "ya está, creo". Si te lavarías las manos con papel seco, sigue con papel. Si no, ya entendiste.</p>
+        </div>
+        <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.07)">
+          <div style="width:46px;height:46px;border-radius:13px;background:rgba(11,169,194,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><span style="width:16px;height:16px;border-radius:5px;background:#0BA9C2;display:block"></span></div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 10px;line-height:1.25">Como hotel cinco estrellas</h3>
+          <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">Los hoteles caros del mundo lo usan por algo. Tu casa en Perú también puede.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPATIBILIDAD -->
+  <section id="compat" style="background:#fff;padding:96px 24px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">03 · Compatibilidad</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">¿Funciona en <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">tu inodoro</em>?</h2>
+      <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:640px;margin:0 0 48px">Diseñado para los inodoros más comunes en Perú. Si no estás seguro, mándanos una foto al WhatsApp y te respondemos en minutos.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px">
+        <div style="background:#FAF6EE;border-radius:20px;padding:22px;border:1px solid rgba(15,34,39,0.06);text-align:center">
+          <div role="img" aria-label="One-piece recto" style="background-color:#fff;border-radius:14px;height:170px;margin-bottom:16px;background-image:url(assets/toilet-1.png);background-size:contain;background-repeat:no-repeat;background-position:center"></div>
+          <div style="display:inline-block;background:rgba(11,169,194,0.14);color:#0a7a8c;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:999px;margin-bottom:10px">✓ Compatible</div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0 0 8px">One-piece recto</h3>
+          <p style="font-size:14px;line-height:1.5;color:#4a5a5e;margin:0">El asiento y tanque forman ángulo de 90°.</p>
+        </div>
+        <div style="background:#FAF6EE;border-radius:20px;padding:22px;border:1px solid rgba(15,34,39,0.06);text-align:center">
+          <div role="img" aria-label="Dos piezas clásico" style="background-color:#fff;border-radius:14px;height:170px;margin-bottom:16px;background-image:url(assets/toilet-2.png);background-size:contain;background-repeat:no-repeat;background-position:center"></div>
+          <div style="display:inline-block;background:rgba(11,169,194,0.14);color:#0a7a8c;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:999px;margin-bottom:10px">✓ Compatible</div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0 0 8px">Dos piezas clásico</h3>
+          <p style="font-size:14px;line-height:1.5;color:#4a5a5e;margin:0">El asiento y tanque forman ángulo de 90°.</p>
+        </div>
+        <div style="background:#FAF6EE;border-radius:20px;padding:22px;border:1px solid rgba(15,34,39,0.06);text-align:center">
+          <div role="img" aria-label="One-piece recto" style="background-color:#fff;border-radius:14px;height:170px;margin-bottom:16px;background-image:url(assets/toilet-3.png);background-size:contain;background-repeat:no-repeat;background-position:center"></div>
+          <div style="display:inline-block;background:rgba(11,169,194,0.14);color:#0a7a8c;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:999px;margin-bottom:10px">✓ Compatible</div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0 0 8px">One-piece recto</h3>
+          <p style="font-size:14px;line-height:1.5;color:#4a5a5e;margin:0">El asiento y tanque forman ángulo de 90°.</p>
+        </div>
+        <div style="background:#FAF6EE;border-radius:20px;padding:22px;border:1px solid rgba(15,34,39,0.06);text-align:center">
+          <div role="img" aria-label="One-piece Curvado" style="background-color:#fff;border-radius:14px;height:170px;margin-bottom:16px;background-image:url(assets/toilet-4.png);background-size:contain;background-repeat:no-repeat;background-position:center"></div>
+          <div style="display:inline-block;background:rgba(214,90,70,0.14);color:#b54a37;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:999px;margin-bottom:10px">✕ No compatible</div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0 0 8px">One-piece Curvado</h3>
+          <p style="font-size:14px;line-height:1.5;color:#4a5a5e;margin:0">El asiento y el tanque NO forman ángulo de 90°. No permite la instalación de Lavapopo.</p>
+        </div>
+      </div>
+      <div style="background:#0F2227;color:#fff;border-radius:20px;padding:26px 30px;margin-top:30px;font-size:16px;line-height:1.55">
+        <strong>¿No estás seguro?</strong> Mándanos una foto al WhatsApp <a href="https://wa.me/51945670438?text=Hola%20Lavapopo%2C%20quiero%20saber%20si%20mi%20inodoro%20es%20compatible." style="color:#0BA9C2;font-weight:800;text-decoration:none">945 670 438</a> y te confirmamos si Lavapopo encaja en tu baño. (Una foto del inodoro, por favor.)
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- RESEÑAS -->
+<section id="reviews" style="background:#FAF6EE;padding:96px 24px">
+  <div style="max-width:1200px;margin:0 auto">
+
+    <!-- Encabezado -->
+    <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">
+      04 · Reseñas reales
+    </div>
+
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">
+      Lo que dicen los 
+      <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">
+        poperos
+      </em>.
+    </h2>
+
+    <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:660px;margin:0 0 48px">
+      Familias en Lima, Arequipa, Trujillo y Cusco ya jubilaron el papel higiénico. 
+      Estas son algunas de las cosas que nos cuentan.
+    </p>
+
+    <!-- Grid de reseñas -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px">
+
+      <!-- Reseña 1 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
+        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
+          ★★★★★
+        </div>
+
+        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
+          Lo instalé en menos de 20 minutos sin llamar al gasfitero. Mi familia ya no quiere un baño sin Lavapopo.
+        </p>
+
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
+            CM
+          </div>
+
+          <div>
+            <div style="font-weight:800;font-size:15px">
+              Carla Mendoza
+            </div>
+            <div style="font-size:13px;color:#7a8a8e">
+              Lima · Surco
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reseña 2 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
+        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
+          ★★★★★
+        </div>
+
+        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
+          Lo ví en Japón en un viaje y siempre quise uno. Lavapopo me dio lo mismo sin gastar 4 mil soles ni romper el baño.
+        </p>
+
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
+            RT
+          </div>
+
+          <div>
+            <div style="font-weight:800;font-size:15px">
+              Rodrigo Tapia
+            </div>
+            <div style="font-size:13px;color:#7a8a8e">
+              Arequipa
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reseña 3 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
+        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
+          ★★★★★
+        </div>
+
+        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
+          Sufro de hemorroides. El papel me dejaba la zona irritada por días. Con Lavapopo se acabó el ardor. Hasta mi médico lo recomendó.
+        </p>
+
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
+            JR
+          </div>
+
+          <div>
+            <div style="font-weight:800;font-size:15px">
+              Jorge Ramos
+            </div>
+            <div style="font-size:13px;color:#7a8a8e">
+              Lima · San Borja
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reseña 4 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
+        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
+          ★★★★★
+        </div>
+
+        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
+          Mi trasero nunca había estado tan contento. Ya lo dije.
+        </p>
+
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
+            MT
+          </div>
+
+          <div>
+            <div style="font-weight:800;font-size:15px">
+              Marco T.
+            </div>
+            <div style="font-size:13px;color:#7a8a8e">
+              Lima · Miraflores
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reseña 5 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
+        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
+          ★★★★★
+        </div>
+
+        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
+          Ya tengo mi Lavapopo hace 2 años. Ahora cada vez que viajo y me quedo en un hotel, extraño demasiado el Lavapopo. Limpiarse solo con papel ya no se siente igual, se siente la suciedad.
+        </p>
+
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
+            AL
+          </div>
+
+          <div>
+            <div style="font-weight:800;font-size:15px">
+              Andrea López
+            </div>
+            <div style="font-size:13px;color:#7a8a8e">
+              Lima · San Isidro
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Reseña 5.1 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
+        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
+          ★★★★★
+        </div>
+
+        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
+          Soy una persona en silla de ruedas, antes dependía de mi padre para poder limpiarme el trasero cada vez que hacía el dos. Ahora con el Lavapopo ya me atiendo sólo, no dependeo de otras personas, y además estoy más limpio. Es un golazo.
+        </p>
+
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
+            FS
+          </div>
+
+          <div>
+            <div style="font-weight:800;font-size:15px">
+              Felix Seminario
+            </div>
+            <div style="font-size:13px;color:#7a8a8e">
+              Cerro de Pasco
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Reseña 6 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
+        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
+          ★★★★★
+        </div>
+
+        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
+          Mis hijos de 5 y 7 años aprendieron a usarlo en un día. Quedan más limpios que con papel y a mí me facilita un montón la rutina.
+        </p>
+
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
+            PC
+          </div>
+
+          <div>
+            <div style="font-weight:800;font-size:15px">
+              Patricia Castro
+            </div>
+            <div style="font-size:13px;color:#7a8a8e">
+              Lima · La Molina
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reseña 7 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
+        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
+          ★★★★★
+        </div>
+
+        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
+          Pensé que era una exageración hasta que lo probé. Ya no sé cómo vivía sin esto. Mi familia entera se convirtió en la primera semana.
+        </p>
+
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
+            JM
+          </div>
+
+          <div>
+            <div style="font-weight:800;font-size:15px">
+              José Mamani
+            </div>
+            <div style="font-size:13px;color:#7a8a8e">
+              Cusco
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Reseña 7.1 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
+        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
+          ★★★★★
+        </div>
+
+        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
+          Mi esposa se acababa de operar y era muy dificil para ella el tema de ir al baño y encima tener que limpiarse cuando defecaba. El doctor me recomendó el Lavapopo y fué un alivio porque ya solo tenía que sentarse, girar la manilla de Lavapopo y  la limpieza se hacía sola a su gusto. Muy recomendado.
+        </p>
+
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
+            LS
+          </div>
+
+          <div>
+            <div style="font-weight:800;font-size:15px">
+              Luis Saenz
+            </div>
+            <div style="font-size:13px;color:#7a8a8e">
+              Lima · Ate
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reseña 8 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
+        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
+          ★★★★★
+        </div>
+
+        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
+          Le dije a mi esposo que era una pérdida de plata. Me equivoqué. Ahora somos nosotros los que se lo recomendamos a todo el mundo.
+        </p>
+
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
+            RP
+          </div>
+
+          <div>
+            <div style="font-weight:800;font-size:15px">
+              Roxana Paredes
+            </div>
+            <div style="font-size:13px;color:#7a8a8e">
+              Lima · Los Olivos
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+```
+
+
+  <!-- CALCULADORA -->
+  <section id="calculator" style="background:#0F2227;color:#fff;padding:96px 24px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">05 · Calculadora</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">¿Cuánto le pagas <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">al papel</em>?</h2>
+      <p style="font-size:17px;line-height:1.6;color:rgba(255,255,255,0.82);max-width:660px;margin:0 0 48px">Mueve los deslizadores. Descubre cuánto gastas hoy en papel higiénico, cuánto te recupera el Lavapopo y cuánto te roba el papel.&nbsp;</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:start">
+        <div style="display:flex;flex-direction:column;gap:34px">
+
+
+<div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px"><span style="font-weight:700;font-size:16px">Personas en casa</span><span id="peopleLabel" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;color:#0BA9C2">4 personas</span></div>
+  <input type="range" class="lp-range" id="peopleRange" min="1" max="10" step="1" value="4">
+</div>
+
+<div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px"><span style="font-weight:700;font-size:16px">Rollos por persona, por semana</span><span id="rollsLabel" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;color:#0BA9C2">1 rollo</span></div>
+  <input type="range" class="lp-range" id="rollsRange" min="0.5" max="4" step="0.5" value="1">
+</div>
+
+<div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px"><span style="font-weight:700;font-size:16px">Precio por rollo</span><span id="priceLabel" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;color:#0BA9C2">S/ 1.00</span></div>
+  <input type="range" class="lp-range" id="priceRange" min="0.5" max="4" step="0.05" value="1.00">
+  <div style="display:flex;justify-content:space-between;font-size:12.5px;color:rgba(255,255,255,0.5);margin-top:8px"><span>S/ 0.50</span><span>S/ 4.00</span></div>
+</div>
+         
+
+
+ <p style="font-size:13px;color:rgba(255,255,255,0.55);margin:0">* Lavapopo reduce hasta el 90% del consumo de papel higiénico.</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:24px;padding:34px">
+
+          
+
+<div style="margin-bottom:24px">
+  <div style="font-size:14px;color:rgba(255,255,255,0.7);margin-bottom:4px">Tu familia gasta hoy</div>
+  <div id="annualLabel" style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:46px;line-height:1;color:#fff">S/ 286</div>
+  <div style="font-size:14px;color:rgba(255,255,255,0.7);margin-top:4px">al año, en papel higiénico. Todos los años.</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px">
+  <div style="background:rgba(11,169,194,0.16);border-radius:16px;padding:18px">
+    <div style="font-size:13px;color:rgba(255,255,255,0.75)">Con Lavapopo ahorras</div>
+    <div id="ahorroLabel" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:26px;color:#0BA9C2;margin-top:4px">S/ 257</div>
+    <div style="font-size:12.5px;color:rgba(255,255,255,0.6)">cada año</div>
+  </div>
+
+  <div style="background:rgba(255,255,255,0.06);border-radius:16px;padding:18px">
+    <div style="font-size:13px;color:rgba(255,255,255,0.75)">En 10 años, el papel te robará</div>
+    <div id="tenYearLabel" style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:34px;color:#fff;margin-top:10px">S/ 2,857</div>
+  </div>
+</div>
+
+          
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a href="https://wa.me/51945670438?text=Hola%20Lavapopo%2C%20quiero%20comprar%20mi%20Lavapopo." style="text-decoration:none;background:#0BA9C2;color:#fff;font-weight:800;padding:14px 22px;border-radius:999px;flex:1;text-align:center;min-width:140px">Quiero el mío</a>
+            <a href="https://wa.me/51945670438?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Lavapopo." style="text-decoration:none;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);color:#fff;font-weight:700;padding:14px 22px;border-radius:999px;flex:1;text-align:center;min-width:140px">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANETA -->
+  <section style="background:#0BA9C2;color:#fff;padding:96px 24px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-bottom:14px">06 · Planeta</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">Más higiene. <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0F2227">Menos huella</em>.</h2>
+      <p style="font-size:17px;line-height:1.6;color:rgba(255,255,255,0.92);max-width:660px;margin:0 0 48px">Cada Lavapopo evita cientos de rollos al año por familia. Es un cambio chico en casa y un cambio enorme para el planeta. Los árboles también te lo agradecen.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px">
+        <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:20px;padding:30px">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:34px;line-height:1;margin-bottom:14px">240 rollos/año</div>
+          <p style="font-size:16px;line-height:1.55;margin:0 0 14px;color:rgba(255,255,255,0.95)">Lo que usa una familia peruana de 4. Con Lavapopo: casi nada.</p>
+          <div style="font-size:13px;color:rgba(255,255,255,0.7)">Familia promedio · 4 personas</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:20px;padding:30px">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:34px;line-height:1;margin-bottom:14px">5 árboles</div>
+          <p style="font-size:16px;line-height:1.55;margin:0 0 14px;color:rgba(255,255,255,0.95)">Para producir el papel que tu familia usa en una década.</p>
+          <div style="font-size:13px;color:rgba(255,255,255,0.7)">Estimación · ciclo de vida del papel</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:20px;padding:30px">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:34px;line-height:1;margin-bottom:14px">90% menos papel</div>
+          <p style="font-size:16px;line-height:1.55;margin:0 0 14px;color:rgba(255,255,255,0.95)">Reducción promedio del consumo de papel al instalar Lavapopo.</p>
+          <div style="font-size:13px;color:rgba(255,255,255,0.7)">Datos · usuarios Lavapopo Perú</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPECIFICACIONES -->
+  <section id="specs" style="background:#fff;padding:96px 24px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">07 · Especificaciones</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">Lo que vas a <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">recibir</em>.</h2>
+      <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:660px;margin:0 0 48px">Cada caja Lavapopo trae todo lo necesario para instalarlo y empezar a usarlo el mismo día. Sin sorpresas, sin "ah, faltaba esto", sin viaje a la ferretería un domingo a las 7 de la mañana.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:38px;align-items:center">
+        <div style="background:#FAF6EE;border-radius:22px;padding:24px;text-align:center"><img src="assets/Contenido_Caja_Lavapopo.png" alt="Contenido de la caja Lavapopo" style="width:100%;height:auto;display:block;border-radius:12px"><div style="font-size:14px;color:#7a8a8e;margin-top:14px;font-weight:600">Todo incluido · listo para instalar</div></div>
+        <div>
+          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Modelo</span><span style="color:#4a5a5e;text-align:right">LP1284</span></div>
+          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Energía</span><span style="color:#4a5a5e;text-align:right">Sin electricidad</span></div>
+          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Material</span><span style="color:#4a5a5e;text-align:right">Plástico ABS · acero inox.</span></div>
+          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Boquilla</span><span style="color:#4a5a5e;text-align:right">Retráctil auto-limpiante</span></div>
+          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Control</span><span style="color:#4a5a5e;text-align:right">Perilla lateral</span></div>
+          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Conexión</span><span style="color:#4a5a5e;text-align:right">T 7/8" estándar</span></div>
+          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Instalación</span><span style="color:#4a5a5e;text-align:right">≈ 15 min · sin gasfitero</span></div>
+          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0"><span style="font-weight:700;color:#0F2227">Garantía</span><span style="color:#4a5a5e;text-align:right">1 año oficial</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- FICHA TECNICA -->
+  <section id="tech" style="background:#FAF6EE;padding:96px 24px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">08 · Ficha técnica</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">Diseñado al <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">milímetro</em>.</h2>
+      <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:660px;margin:0 0 48px">Aquí los planos oficiales, vistas, partes, dimensiones reales en milímetros. Porque cuando un producto va entre tu trasero y el inodoro, es bueno saber qué hace cada milímetro.</p>
+     <div class="tech-grid" style="display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:22px;margin-bottom:34px;justify-content:center">
+        <div class="tech-card" style="background: #fff; border-radius: 18px; padding: 22px; border: 1px solid rgba(15,34,39,0.06); widt30px"><div role="img" aria-label="01 · Superior — 215 mm de ancho · 135 mm entre placas ajustables." style="height:230px;background-image:url('assets/Superior Lineal.JPG');background-size:contain;background-repeat:no-repeat;background-position:center"></div><p style="font-size:13.5px;line-height:1.5;color:#4a5a5e;margin:14px 0 0">01 · Superior — 215 mm de ancho · 135 mm entre placas ajustables.</p></div>
+        <div class="tech-card" style="background: #fff; border-radius: 18px; padding: 22px; border: 1px solid rgba(15,34,39,0.06); widt30px"><div role="img" aria-label="02 · Isométrica — Placas ajustables, perilla, boquillas frontal y trasera." style="height:230px;background-image:url('assets/Isometrico Lineal.JPG');background-size:contain;background-repeat:no-repeat;background-position:center"></div><p style="font-size:13.5px;line-height:1.5;color:#4a5a5e;margin:14px 0 0">02 · Isométrica — Placas ajustables, perilla, boquillas frontal y trasera.</p></div>
+        <div class="tech-card" style="background: #fff; border-radius: 18px; padding: 22px; border: 1px solid rgba(15,34,39,0.06); widt30px"><div role="img" aria-label="03 · Frontal — 365 mm de largo · 75 mm de alto · boquilla de 6 mm." style="height:230px;background-image:url('assets/Frontal Lineal.JPG');background-size:contain;background-repeat:no-repeat;background-position:center"></div><p style="font-size:13.5px;line-height:1.5;color:#4a5a5e;margin:14px 0 0">03 · Frontal — 365 mm de largo · 75 mm de alto · boquilla de 6 mm.</p></div>
+        <div class="tech-card" style="background: #fff; border-radius: 18px; padding: 22px; border: 1px solid rgba(15,34,39,0.06); widt30px"><div role="img" aria-label="04 · Perfil — Conexión G 1/2" estándar · entrada de agua fría." style="height:230px;background-image:url('assets/Perfil Lineal.JPG');background-size:contain;background-repeat:no-repeat;background-position:center"></div><p style="font-size:13.5px;line-height:1.5;color:#4a5a5e;margin:14px 0 0">04 · Perfil — Conexión G 1/2" estándar · entrada de agua fría.</p></div>
+        <div class="tech-card" style="background: #fff; border-radius: 18px; padding: 22px; border: 1px solid rgba(15,34,39,0.06); widt30px"><div role="img" aria-label="05 · Lavapopo instalado y funcionando." style="height:230px;background-image:url('assets/Lavapopo instalado.JPG');background-size:contain;background-repeat:no-repeat;background-position:center"></div><p style="font-size:13.5px;line-height:1.5;color:#4a5a5e;margin:14px 0 0">05 · Lavapopo instalado y funcionando.</p></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
+        <div style="background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(15,34,39,0.06)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#0BA9C2">365mm</div><div style="font-size:13px;color:#7a8a8e;margin-top:4px">Largo</div></div>
+        <div style="background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(15,34,39,0.06)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#0BA9C2">215mm</div><div style="font-size:13px;color:#7a8a8e;margin-top:4px">Ancho</div></div>
+        <div style="background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(15,34,39,0.06)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#0BA9C2">75mm</div><div style="font-size:13px;color:#7a8a8e;margin-top:4px">Alto</div></div>
+        <div style="background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(15,34,39,0.06)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#0BA9C2">6mm</div><div style="font-size:13px;color:#7a8a8e;margin-top:4px">Boquilla</div></div>
+        <div style="background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(15,34,39,0.06)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#0BA9C2">G 1/2"</div><div style="font-size:13px;color:#7a8a8e;margin-top:4px">Conexión</div></div>
+        <div style="background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(15,34,39,0.06)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#0BA9C2">135mm</div><div style="font-size:13px;color:#7a8a8e;margin-top:4px">Placas</div></div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- FAQ -->
+  <section id="faq" style="background:#fff;padding:96px 24px">
+    <div style="max-width:860px;margin:0 auto">
+      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">09 · Preguntas frecuentes</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 40px;letter-spacing:-0.02em">Las dudas que <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">no te animaste</em> a preguntar.</h2>
+      <div style="display:flex;flex-direction:column;gap:12px" id="faqContainer"></div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section id="pricing" style="background:#FAF6EE;padding:96px 24px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">10 · Precios</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">Un precio, <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">sin sorpresas</em>.</h2>
+      <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:680px;margin:0 0 48px">Pago contra entrega o transferencia. Envíos a todo Perú con Shalom, Marvisur Courier. Escríbenos al WhatsApp <strong>945 670 438</strong> para coordinar el tuyo. Tu trasero ya esperó suficiente.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;align-items:start">
+        <div style="background:#fff;border-radius:22px;padding:32px;border:2px solid rgba(15,34,39,0.10);position:relative;display:flex;flex-direction:column;height:100%">
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;margin:0 0 6px">Individual</h3>
+          <p style="font-size:14.5px;color:#7a8a8e;margin:0 0 18px;min-height:40px">1 unidad · para tu baño principal.</p>
+          <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:16px"><span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:38px;color:#0F2227">S/ 140</span><span style="font-size:15px;color:#7a8a8e">/unidad</span></div>
+          <p style="font-size:14.5px;line-height:1.55;color:#4a5a5e;margin:0 0 20px">En 10 años ahorras S/ 2,500 en papel. Lavapopo cuesta S/ 140. Pequeño detalle.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;flex:1">
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Lavapopo Clásico</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Adaptador T 7/8" + manguera</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Manual de instalación</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Garantía 1 año</div>
+          </div>
+          <a href="https://wa.me/51945670438?text=Hola%20Lavapopo%2C%20quiero%20el%20plan%20Individual%20%28S%2F%20140%29." style="text-decoration:none;background:#0BA9C2;color:#fff;font-weight:800;text-align:center;padding:15px;border-radius:999px;font-size:15.5px">Lo quiero</a>
+        </div>
+        <div style="background:#fff;border-radius:22px;padding:32px;border:2px solid #0BA9C2;position:relative;display:flex;flex-direction:column;height:100%">
+          <div style="position:absolute;top:-13px;left:32px;background:#0BA9C2;color:#fff;font-weight:800;font-size:12.5px;padding:6px 14px;border-radius:999px">Más vendido</div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;margin:0 0 6px">Familia</h3>
+          <p style="font-size:14.5px;color:#7a8a8e;margin:0 0 18px;min-height:40px">2 unidades · para casas con más de un baño.</p>
+          <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:16px"><span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:38px;color:#0F2227">S/ 249</span><span style="font-size:15px;color:#7a8a8e">/pack</span></div>
+          <p style="font-size:14.5px;line-height:1.55;color:#4a5a5e;margin:0 0 20px">Dos baños limpios. S/ 5,000 ahorrados en 10 años. Y dos traseros felices.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;flex:1">
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>2 × Lavapopo Clásico</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>2 sets de instalación</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Garantía 1 año</div>
+          </div>
+          <a href="https://wa.me/51945670438?text=Hola%20Lavapopo%2C%20quiero%20el%20pack%20Familia." style="text-decoration:none;background:#0BA9C2;color:#fff;font-weight:800;text-align:center;padding:15px;border-radius:999px;font-size:15.5px">Quiero el pack</a>
+        </div>
+        <div style="background:#fff;border-radius:22px;padding:32px;border:2px solid rgba(15,34,39,0.10);position:relative;display:flex;flex-direction:column;height:100%">
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;margin:0 0 6px">Edificio / Hotel</h3>
+          <p style="font-size:14.5px;color:#7a8a8e;margin:0 0 18px;min-height:40px">10+ unidades con descuento por volumen.</p>
+          <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:16px"><span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:38px;color:#0F2227">A medida</span></div>
+          <p style="font-size:14.5px;line-height:1.55;color:#4a5a5e;margin:0 0 20px">Si tu negocio quiere ser un destino premium, los huéspedes lo van a notar. Y a recomendar.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;flex:1">
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Cotización personalizada</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Asesoría de instalación</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Facturación con RUC</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Garantía extendida</div>
+          </div>
+          <a href="https://wa.me/51945670438?text=Hola%20Lavapopo%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20edificio%20u%20hotel." style="text-decoration:none;background:#0BA9C2;color:#fff;font-weight:800;text-align:center;padding:15px;border-radius:999px;font-size:15.5px">Cotizar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+ <!-- =========================================================
+     INICIO SECCIÓN CONTACTO
+========================================================= -->
+<section id="contact" style="background:#fff;padding:96px 24px">
+
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px">
+
+    <!-- COLUMNA IZQUIERDA: TEXTO Y BOTONES -->
+    <div>
+
+      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">
+        11 · Contacto
+      </div>
+
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">
+        Hablemos. Tu trasero
+        <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">
+          lo vale
+        </em>.
+      </h2>
+
+      <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:520px;margin:0 0 30px">
+        Cuéntanos sobre tu baño, te confirmamos compatibilidad, tiempos de envío y el método de pago que prefieras.
+        Atendemos lunes a sábado, 9 am a 7 pm.
+      </p>
+
+      <!-- BOTONES DE CONTACTO -->
+      <div style="display:flex;flex-direction:column;gap:14px">
+
+        <!-- BOTÓN WHATSAPP -->
+        <a 
+          href="https://wa.me/51945670438?text=Hola%20Lavapopo%2C%20me%20interesa%20el%20Lavapopo."
+          style="text-decoration:none;display:flex;align-items:center;gap:14px;background:#FAF6EE;border-radius:16px;padding:18px 20px;border:1px solid rgba(15,34,39,0.06)"
+        >
+          <div style="width:44px;height:44px;border-radius:12px;background:#0BA9C2;flex:none"></div>
+
+          <div>
+            <div style="font-weight:800;color:#0F2227">
+              WhatsApp · respuesta rápida
+            </div>
+
+            <div style="color:#4a5a5e;font-size:14px">
+              945 670 438
+            </div>
+          </div>
+        </a>
+        <!-- FIN BOTÓN WHATSAPP -->
+
+        <!-- BOTÓN ATENCIÓN POR CHAT -->
+        <a 
+          href="https://wa.me/51945670438?text=Hola%20Lavapopo%2C%20me%20interesa%20saber%20m%C3%A1s."
+          style="text-decoration:none;display:flex;align-items:center;gap:14px;background:#FAF6EE;border-radius:16px;padding:18px 20px;border:1px solid rgba(15,34,39,0.06)"
+        >
+          <div style="width:44px;height:44px;border-radius:12px;background:#0F2227;flex:none"></div>
+
+          <div>
+            <div style="font-weight:800;color:#0F2227">
+              Atención por chat
+            </div>
+
+            <div style="color:#4a5a5e;font-size:14px">
+              Lun–Sáb · 9am a 7pm
+            </div>
+          </div>
+        </a>
+        <!-- FIN BOTÓN ATENCIÓN POR CHAT -->
+
+      </div>
+      <!-- FIN BOTONES DE CONTACTO -->
+
+    </div>
+    <!-- FIN COLUMNA IZQUIERDA -->
+
+
+    <!-- COLUMNA DERECHA: FORMULARIO -->
+    <div style="background:#FAF6EE;border-radius:24px;padding:34px;border:1px solid rgba(15,34,39,0.06)">
+
+      <!-- CAMPOS DEL FORMULARIO -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+
+        <!-- CAMPO NOMBRE -->
+        <div>
+          <label style="font-size:13px;font-weight:700;color:#4a5a5e;display:block;margin-bottom:7px">
+            Nombre
+          </label>
+
+          <input 
+            type="text"
+            style="width:100%;padding:13px 15px;border-radius:12px;border:1px solid rgba(15,34,39,0.14);font-family:inherit;font-size:15px;background:#fff"
+          >
+        </div>
+        <!-- FIN CAMPO NOMBRE -->
+
+
+        <!-- CAMPO TELÉFONO -->
+        <div>
+          <label style="font-size:13px;font-weight:700;color:#4a5a5e;display:block;margin-bottom:7px">
+            Teléfono
+          </label>
+
+          <input 
+            type="tel"
+            style="width:100%;padding:13px 15px;border-radius:12px;border:1px solid rgba(15,34,39,0.14);font-family:inherit;font-size:15px;background:#fff"
+          >
+        </div>
+        <!-- FIN CAMPO TELÉFONO -->
+
+
+        <!-- CAMPO .... -->
+<div>
+  <label style="font-size:13px;font-weight:700;color:#4a5a5e;display:block;margin-bottom:7px">
+    Departamento
+  </label>
+
+  <select
+    id="departamentoSelect"
+    style="width:100%;padding:13px 15px;border-radius:12px;border:1px solid rgba(15,34,39,0.14);font-family:inherit;font-size:15px;background:#fff"
+  >
+    <option value="">Selecciona tu departamento</option>
+  </select>
+</div>
+
+<div>
+  <label style="font-size:13px;font-weight:700;color:#4a5a5e;display:block;margin-bottom:7px">
+    Localidad
+  </label>
+
+  <input
+    type="text"
+    placeholder="Escribe tu localidad o distrito"
+    style="width:100%;padding:13px 15px;border-radius:12px;border:1px solid rgba(15,34,39,0.14);font-family:inherit;font-size:15px;background:#fff"
+  >
+</div>
+        <!-- FIN CAMPO .... -->
+
+      </div>
+      <!-- FIN CAMPOS DEL FORMULARIO -->
+
+
+      <!-- CAMPO CUÉNTANOS -->
+      <div style="margin-bottom:18px">
+        <label style="font-size:13px;font-weight:700;color:#4a5a5e;display:block;margin-bottom:7px">
+          Cuéntanos
+        </label>
+
+        <textarea 
+          rows="4"
+          style="width:100%;padding:13px 15px;border-radius:12px;border:1px solid rgba(15,34,39,0.14);font-family:inherit;font-size:15px;background:#fff;resize:vertical"
+        ></textarea>
+      </div>
+      <!-- FIN CAMPO CUÉNTANOS -->
+
+
+      <!-- BOTÓN FINAL -->
+      <a 
+        href="https://wa.me/51945670438?text=Hola%20Lavapopo%2C%20me%20interesa%20el%20Lavapopo."
+        style="text-decoration:none;display:block;text-align:center;background:#0BA9C2;color:#fff;font-weight:800;padding:15px;border-radius:999px;font-size:16px"
+      >
+        Quiero Lavapopo
+      </a>
+      <!-- FIN BOTÓN FINAL -->
+
+    </div>
+    <!-- FIN COLUMNA DERECHA -->
+
+  </div>
+
+</section>
+<!-- =========================================================
+     FIN SECCIÓN CONTACTO
+========================================================= -->
+
+
+
+
+  <!-- FOOTER -->
+  <footer style="background:#0F2227;color:#fff;padding:72px 24px 40px">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px">
+      <div style="grid-column:span 1;min-width:240px">
+        <img src="assets/logo-blanco.png" alt="Lavapopo" style="height:88px;width:auto;display:block;margin-bottom:18px">
+        <div style="font-weight:700;font-size:15px;margin-bottom:10px;color:rgba(255,255,255,0.92)">Para poperos exigentes.</div>
+        <p style="font-size:14.5px;line-height:1.6;color:rgba(255,255,255,0.6);margin:0;max-width:300px">Accesorio para inodoro, sin electricidad. Instalación en 5 minutos. Hecho para hogares peruanos que merecen un mejor desenlace.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;margin:0 0 16px">Producto</h4>
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <a href="#how" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">Cómo funciona</a>
+          <a href="#features" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">Beneficios</a>
+          <a href="#specs" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">Especificaciones</a>
+          <a href="#tech" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">Ficha técnica</a>
+          <a href="#compat" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">Compatibilidad</a>
+          <a href="#pricing" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">Precios</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;margin:0 0 16px">Atención</h4>
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <a href="https://wa.me/51945670438" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">WhatsApp 945 670 438</a>
+          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Lun a Sáb · 8 am – 8 pm</span>
+          <a href="#faq" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">FAQ</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;margin:0 0 16px">Envíos</h4>
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Envíos a todo Perú</span>
+          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Pago contra entrega</span>
+          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Transferencia bancaria</span>
+          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Shalom</span>
+          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Marvisur</span>
+          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Yape</span>
+
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:48px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.12);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13.5px;color:rgba(255,255,255,0.5)">
+      <span>© 2026 Lavapopo · Para poperos exigentes 💩</span>
+      <span>Lima, Perú · El papel no limpia. El agua sí.</span>
+    </div>
+  </footer>
+
+</div>
+
+
+<script>
+
+// Countdown
+function startCountdown() {
+  let end = +localStorage.getItem('lp_promo_end');
+  if (!end || isNaN(end) || end < Date.now()) {
+    end = Date.now() + 4 * 24 * 3600 * 1000;
+    try { localStorage.setItem('lp_promo_end', String(end)); } catch (e) {}
+  }
+  const pad = n => String(n).padStart(2, '0');
+  const tick = () => {
+    const diff = Math.max(0, end - Date.now());
+    document.getElementById('cdD').textContent = pad(Math.floor(diff / 86400000));
+    document.getElementById('cdH').textContent = pad(Math.floor((diff % 86400000) / 3600000));
+    document.getElementById('cdM').textContent = pad(Math.floor((diff % 3600000) / 60000));
+  };
+  tick();
+  setInterval(tick, 20000);
+}
+
+
+// MENU BURGER MOVIL
+var lpBurgerBtn = document.getElementById('burgerBtn');
+var lpMobileNav = document.getElementById('mobileNav');
+var lpMainNav = document.getElementById('mainNav');
+
+function lpShowMainNavOnly() {
+  if (!lpMainNav) return;
+
+  lpMainNav.style.transform = 'translateY(0)';
+  lpMainNav.style.opacity = '1';
+  lpMainNav.style.pointerEvents = 'auto';
+}
+
+function lpCloseMobileNav() {
+  if (!lpMobileNav) return;
+
+  lpMobileNav.style.display = 'none';
+}
+
+function lpOpenMobileNav() {
+  if (!lpMobileNav) return;
+
+  lpShowMainNavOnly();
+  lpMobileNav.style.display = 'block';
+}
+
+if (lpBurgerBtn && lpMobileNav && lpMainNav) {
+  lpBurgerBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    lpShowMainNavOnly();
+
+    if (lpMobileNav.style.display === 'block') {
+      lpCloseMobileNav();
+    } else {
+      lpOpenMobileNav();
+    }
+  });
+
+  // Cierra el menú móvil al tocar cualquier opción
+  var lpMobileLinks = lpMobileNav.querySelectorAll('a');
+
+  lpMobileLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      lpCloseMobileNav();
+      lpShowMainNavOnly();
+    });
+  });
+
+  // Cierra el menú si haces clic fuera del menú
+  document.addEventListener('click', function(event) {
+    var clickedInsideMenu = lpMobileNav.contains(event.target);
+    var clickedBurger = lpBurgerBtn.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedBurger) {
+      lpCloseMobileNav();
+    }
+  });
+}
+
+
+
+
+
+// Calculator
+const fmt = n => 'S/ ' + Math.round(n).toLocaleString('es-PE');
+function updateCalc() {
+  const people = +document.getElementById('peopleRange').value;
+  const rolls = +document.getElementById('rollsRange').value;
+  const price = +document.getElementById('priceRange').value;
+  
+  document.getElementById('peopleLabel').textContent = people + (people === 1 ? ' persona' : ' personas');
+  document.getElementById('rollsLabel').textContent = (Number.isInteger(rolls) ? rolls : rolls.toFixed(1)) + (rolls === 1 ? ' rollo' : ' rollos');
+  document.getElementById('priceLabel').textContent = 'S/ ' + price.toFixed(2);
+  
+  const annual = people * rolls * 52 * price;
+  const ahorro = annual * 0.9;
+  const weeks = Math.max(1, Math.round(140 / (ahorro / 52)));
+  const tenYear = annual * 10;
+  
+  document.getElementById('annualLabel').textContent = fmt(annual);
+  document.getElementById('ahorroLabel').textContent = fmt(ahorro);
+
+const weeksLabel = document.getElementById('weeksLabel');
+if (weeksLabel) {
+  weeksLabel.textContent = weeks + (weeks === 1 ? ' semana' : ' semanas');
+}
+
+
+  document.getElementById('tenYearLabel').textContent = fmt(tenYear);
+}
+
+document.getElementById('peopleRange').addEventListener('input', updateCalc);
+document.getElementById('rollsRange').addEventListener('input', updateCalc);
+document.getElementById('priceRange').addEventListener('input', updateCalc);
+
+
+// FAQ
+const faqData = [
+  { q: '¿Para quién es el Lavapopo?', a: 'Para poperos. Y todos somos poperos. El 100% de los humanos hace popo — pero solo unos pocos se lavan de verdad. Bienvenido al otro lado.' },
+  { q: '¿Me va a mojar la ropa?', a: 'No. La boquilla se posiciona debajo del asiento y el chorro apunta hacia arriba con un ángulo controlado. Tu ropa queda completamente fuera del recorrido del agua. Solo tu trasero recibe el saludo.' },
+  { q: '¿El agua sale fría?', a: 'Sale a la temperatura del agua de tu casa. En la costa peruana suele estar entre 18°C y 22°C — fresca, no helada. Si tu primer encuentro es a las 7 am de un julio limeño, vas a estar muy despierto. Es parte del paquete.' },
+  { q: '¿Funciona con baja presión de agua?', a: 'Sí, con la presión estándar de la red peruana (mínimo 1 bar). Si tu inodoro carga el tanque en menos de dos minutos, Lavapopo funciona perfecto. Si tu presión es muy baja, escríbenos por WhatsApp antes de comprar.' },
+  { q: '¿Qué pasa si hay corte de agua?', a: 'Lavapopo usa la misma agua que tu inodoro. Si hay corte general, ninguno de los dos funciona — igual que cuando se va la luz, tampoco entra Netflix. Cuando vuelve el agua, Lavapopo opera sin reinicio ni mantenimiento.' },
+  { q: '¿Y si me mudo, puedo llevármelo?', a: 'Sí. La instalación es 100% reversible. Se desmonta en 10 minutos con una llave inglesa, sin marcas ni daños. Te lo llevas a la nueva casa y lo reinstalas igual de fácil.' },
+  { q: '¿Necesito gasfitero?', a: 'No. La caja incluye todas las piezas y un manual paso a paso. Necesitas una llave inglesa (la mayoría de casas tiene una). Si prefieres no hacerlo tú, en Lima ofrecemos servicio de instalación con costo adicional — pregunta por WhatsApp.' },
+  { q: '¿Es higiénico? ¿La boquilla se limpia sola?', a: 'Sí. La boquilla se retrae y se enjuaga sola antes y después de cada uso. Es de acero inoxidable de grado sanitario y solo entra en contacto con agua limpia — nunca con desechos. Más higiénica que la mayoría de los cubiertos de un restaurante.' },
+  { q: '¿Realmente llega a quitar todo el popó del trasero?', a: 'Sí. La presión del agua hace que hasta el popó más pegajoso se desprenda del trasero. Solo deja que el agua haga su trabajo por un tiempo (30 segundos o más, si quieres). Y si sientes que no llega a alguna zona específica, mueve ligeramente el trasero y listo.' }
+];
+
+function renderFAQ() {
+  const container = document.getElementById('faqContainer');
+  faqData.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.style.cssText = 'background:#FAF6EE;border-radius:16px;border:1px solid rgba(15,34,39,0.06);overflow:hidden';
+    
+    const btn = document.createElement('button');
+    btn.style.cssText = 'width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:Montserrat,sans-serif;font-weight:700;font-size:17px;color:#0F2227';
+    btn.innerHTML = item.q + '<span style="color:#0BA9C2;font-size:22px;flex:none">+</span>';
+    
+    const ansDiv = document.createElement('div');
+    ansDiv.style.cssText = 'padding:0 24px 24px;font-size:16px;line-height:1.6;color:#4a5a5e;display:none';
+    ansDiv.textContent = item.a;
+    
+    btn.addEventListener('click', function() {
+      const isOpen = ansDiv.style.display === 'block';
+      ansDiv.style.display = isOpen ? 'none' : 'block';
+      btn.querySelector('span').textContent = isOpen ? '+' : '–';
+    });
+    
+    div.appendChild(btn);
+    div.appendChild(ansDiv);
+    container.appendChild(div);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  updateCalc();
+  renderFAQ();
+});
+</script>
+
+
+<script>
+  const mainNav = document.getElementById("mainNav");
+
+  let lastScrollY = window.scrollY;
+  let lastMouseY = null;
+
+  function showMenu() {
+    mainNav.style.transform = "translateY(0)";
+    mainNav.style.opacity = "1";
+  }
+
+  function hideMenu() {
+    mainNav.style.transform = "translateY(-100%)";
+    mainNav.style.opacity = "0";
+  }
+
+  window.addEventListener("scroll", function () {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY <= 10) {
+      showMenu();
+    } else if (currentScrollY > lastScrollY) {
+      hideMenu();
+    } else if (currentScrollY < lastScrollY) {
+      showMenu();
+    }
+
+    lastScrollY = currentScrollY;
+  });
+
+  window.addEventListener("mousemove", function (event) {
+    const currentMouseY = event.clientY;
+
+    if (lastMouseY !== null) {
+      const difference = lastMouseY - currentMouseY;
+
+      if (difference > 8) {
+        showMenu();
+      }
+    }
+
+    lastMouseY = currentMouseY;
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const departamentoSelect = document.getElementById("departamentoSelect");
+
+    if (!departamentoSelect) return;
+
+    const departamentos = [
+      { id: "01", name: "Amazonas" },
+      { id: "02", name: "Áncash" },
+      { id: "03", name: "Apurímac" },
+      { id: "04", name: "Arequipa" },
+      { id: "05", name: "Ayacucho" },
+      { id: "06", name: "Cajamarca" },
+      { id: "07", name: "Callao" },
+      { id: "08", name: "Cusco" },
+      { id: "09", name: "Huancavelica" },
+      { id: "10", name: "Huánuco" },
+      { id: "11", name: "Ica" },
+      { id: "12", name: "Junín" },
+      { id: "13", name: "La Libertad" },
+      { id: "14", name: "Lambayeque" },
+      { id: "15", name: "Lima" },
+      { id: "16", name: "Loreto" },
+      { id: "17", name: "Madre de Dios" },
+      { id: "18", name: "Moquegua" },
+      { id: "19", name: "Pasco" },
+      { id: "20", name: "Piura" },
+      { id: "21", name: "Puno" },
+      { id: "22", name: "San Martín" },
+      { id: "23", name: "Tacna" },
+      { id: "24", name: "Tumbes" },
+      { id: "25", name: "Ucayali" }
+    ];
+
+    departamentos.forEach(function (departamento) {
+      const option = document.createElement("option");
+      option.value = departamento.name;
+      option.textContent = departamento.name;
+      departamentoSelect.appendChild(option);
+    });
+  });
+</script>
+
+
+</body>
+</html>
