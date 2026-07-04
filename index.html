@@ -1317,16 +1317,61 @@ document.getElementById('priceRange').addEventListener('input', updateCalc);
 
 // FAQ
 const faqData = [
-  { q: '¿Para quién es el Lavapopo?', a: 'Para poperos. Y todos somos poperos. El 100% de los humanos hace popo — pero solo unos pocos se lavan de verdad. Bienvenido al otro lado.' },
-  { q: '¿Me va a mojar la ropa?', a: 'No. La boquilla se posiciona debajo del asiento y el chorro apunta hacia arriba con un ángulo controlado. Tu ropa queda completamente fuera del recorrido del agua. Solo tu trasero recibe el saludo.' },
-  { q: '¿El agua sale fría?', a: 'Sale a la temperatura del agua de tu casa. En la costa peruana suele estar entre 18°C y 22°C — fresca, no helada. Si tu primer encuentro es a las 7 am de un julio limeño, vas a estar muy despierto. Es parte del paquete.' },
-  { q: '¿Funciona con baja presión de agua?', a: 'Sí, con la presión estándar de la red peruana (mínimo 1 bar). Si tu inodoro carga el tanque en menos de dos minutos, Lavapopo funciona perfecto. Si tu presión es muy baja, escríbenos por WhatsApp antes de comprar.' },
-  { q: '¿Qué pasa si hay corte de agua?', a: 'Lavapopo usa la misma agua que tu inodoro. Si hay corte general, ninguno de los dos funciona — igual que cuando se va la luz, tampoco entra Netflix. Cuando vuelve el agua, Lavapopo opera sin reinicio ni mantenimiento.' },
-  { q: '¿Y si me mudo, puedo llevármelo?', a: 'Sí. La instalación es 100% reversible. Se desmonta en 10 minutos con una llave inglesa, sin marcas ni daños. Te lo llevas a la nueva casa y lo reinstalas igual de fácil.' },
-  { q: '¿Necesito gasfitero?', a: 'No. La caja incluye todas las piezas y un manual paso a paso. Necesitas una llave inglesa (la mayoría de casas tiene una). Si prefieres no hacerlo tú, en Lima ofrecemos servicio de instalación con costo adicional — pregunta por WhatsApp.' },
-  { q: '¿Es higiénico? ¿La boquilla se limpia sola?', a: 'Sí. La boquilla se retrae y se enjuaga sola antes y después de cada uso. Es de acero inoxidable de grado sanitario y solo entra en contacto con agua limpia — nunca con desechos. Más higiénica que la mayoría de los cubiertos de un restaurante.' },
-  { q: '¿Realmente llega a quitar todo el popó del trasero?', a: 'Sí. La presión del agua hace que hasta el popó más pegajoso se desprenda del trasero. Solo deja que el agua haga su trabajo por un tiempo (30 segundos o más, si quieres). Y si sientes que no llega a alguna zona específica, mueve ligeramente el trasero y listo.' }
+  {
+    q: '¿Para quién es el Lavapopo?',
+    a: 'Para todos: Lo pueden usar niños, ancianos, personas de todas las edades, personas con movilidad reducida, personas con dolencias, operaciones.'
+  },
+  {
+    q: '¿El popó cae en el Lavapopo?',
+    a: 'No. Lavapopo permanece debajo del asiento y no bloquea el interior de la taza. El popó cae directamente dentro del inodoro, como siempre. El dispositivo solo entra en acción cuando terminas y giras la perilla para iniciar la limpieza.'
+  },
+  {
+    q: 'Cuando terminas, ¿usas papel para secarte?',
+    a: 'Sí. Al terminar puedes usar un solo pedazo de papel higiénico para secar las gotas de agua que hayan quedado y comprobar que la limpieza está completa. Como el agua realiza la limpieza, necesitarás solo un corte de papel higiénico para secarte las gotitas de agua que queden al rededor de tu *.'
+  },
+  {
+    q: '¿Usa electricidad o baterías?',
+    a: 'No. Lavapopo no utiliza electricidad, baterías ni cargadores. Funciona únicamente con la presión del agua de la conexión del inodoro. Si tu tanque se llena normalmente, Lavapopo está listo para funcionar.'
+  },
+  {
+    q: '¿Una mujer podría sufrir una infección porque el chorro llega hasta adelante?',
+    a: 'Lavapopo tiene una boquilla posterior y otra frontal, las cuales se activan de manera independiente. Para la limpieza posterior debe usarse únicamente la boquilla trasera, con una presión moderada. En el caso de las mujeres, es importante evitar dirigir agua desde la zona anal hacia la vagina. Usándolo correctamente, cada boquilla limpia solamente la zona para la cual fue diseñada. Una vez que lo uses te darás cuenta que el chorro pierde fuerza al chocar con el * y no salpica hacia ningún lado. Igualmente cuando las mujeres se lavan la parte frontal el agua cae directamente en la zona íntima '
+  },
+  {
+    q: '¿Salpica la taza o puede mojar mis piernas, ropa o el piso?',
+    a: 'No debería. Al estar sentado, tu cuerpo y la taza contienen el agua dentro del inodoro. La boquilla dirige el chorro hacia la zona de limpieza (*) y ahí muere la presión y el agua cae nuevamente dentro de la taza hacia abajo, no hacia lo costados. En los primeros usos, gira la perilla lentamente hasta encontrar una presión cómoda y evitar salpicaduras innecesarias. Con la práctica en 3 usos te convertirás en un(a) experto(a) en Lavapopo.'
+  },
+  {
+    q: '¿El agua fría es molesta cuando toca tu trasero?',
+    a: 'La primera vez puede sentirse fresca, especialmente en invierno, pero el contacto dura pocos segundos y normalmente uno se acostumbra muy rápido. Además, puedes abrir la perilla poco a poco para comenzar con un chorro suave. La mayoría de los usuarios deja de notar la temperatura después de los primeros usos.'
+  },
+  {
+    q: '¿Cómo se lava Lavapopo si se mancha?',
+    a: 'Puedes limpiarlo con un paño húmedo, agua y jabón suave. La boquilla también se enjuaga con agua limpia cada vez que se utiliza y permanece protegida cuando no está funcionando. Evita esponjas metálicas, productos abrasivos o químicos fuertes que puedan dañar el material.'
+  },
+  {
+    q: '¿Funciona con baja presión de agua?',
+    a: 'Sí, funciona con la presión habitual de la red de agua. Si tu inodoro llena el tanque con normalidad, Lavapopo debería funcionar correctamente. La intensidad del chorro se controla girando gradualmente la perilla.'
+  },
+  {
+    q: '¿Qué pasa si hay corte de agua?',
+    a: 'Lavapopo utiliza la misma conexión de agua que el inodoro. Durante un corte general no podrá funcionar, igual que el tanque del inodoro. Cuando regrese el suministro de agua, volverá a funcionar inmediatamente, sin electricidad, reinicios ni mantenimiento.'
+  },
+  {
+    q: '¿Y si me mudo, puedo llevármelo?',
+    a: 'Sí. La instalación es reversible y no requiere perforaciones ni modificaciones permanentes. Puedes desmontarlo, volver a conectar el inodoro como estaba y llevar Lavapopo a tu nueva vivienda para instalarlo nuevamente.'
+  },
+  {
+    q: '¿Necesito gasfitero?',
+    a: 'No. La caja incluye las piezas necesarias y un manual de instalación paso a paso. La instalación se realiza utilizando las conexiones existentes del inodoro, sin romper paredes ni hacer obras. Solo necesitas herramientas básicas.'
+  },
+  {
+    q: '¿Realmente llega a quitar todo el popó del trasero?',
+    a: 'Sí. El chorro de agua ayuda a desprender y retirar los residuos con mayor eficacia que el papel seco. Puedes regular la presión y mover ligeramente tu cuerpo, sin levantarte del asiento, para que el agua llegue a toda la zona necesaria. Al finalizar, usa un poco de papel únicamente para secarte y verificar la limpieza. El papel que pases saldrá unicamente con agua sin residuos de popó'
+  }
 ];
+
+
 
 function renderFAQ() {
   const container = document.getElementById('faqContainer');
