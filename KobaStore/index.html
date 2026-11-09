@@ -1,1571 +1,1081 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQG93KS6H0"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
   gtag('config', 'G-RQG93KS6H0');
 </script>
 
-
 <meta charset="utf-8">
-
-<title>Lavapopo | Accesorio para limpiar el trasero con agua</title>
-<meta name="description" content="Lavapopo es un accesorio para inodoro fácil de instalar, sin electricidad y con control de presión. Compra y recibe atención por WhatsApp: 951 540 663. Envíos a todo Perú">
-
+<title>Lavapopo | Accesorio de higiene con agua para inodoro</title>
+<meta name="description" content="Lavapopo es un accesorio para inodoro que limpia con agua. Se instala en 15 minutos, sin electricidad y con presión regulable. Atención por WhatsApp: 951 540 663. Envíos a todo el Perú.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-
+<meta name="theme-color" content="#0E2231">
 
 <link rel="icon" type="image/png" href="../assets/FAVICON%20WEB%20DESKTPP%20LAVAPOPO.png">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Mulish:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 
 <style>
-  * {
-    box-sizing: border-box;
+  :root {
+    --ink: #0E2231;
+    --text: #21343F;
+    --muted: #566872;
+    --line: rgba(16, 36, 42, 0.10);
+    --soft: #F5F4F0;
+    --white: #FFFFFF;
+    --brand: #0089BA;
+    --brand-ink: #0B6F96;
+    --brand-light: #8FE3F5;
+    --aqua: #E4F4FA;
+    --aqua-soft: #EEF8FC;
+    --teal: #0A7AA3;
+    --teal-hover: #0B6F96;
+    --teal-deep: #0C4F70;
+    --radius: 18px;
+    --max: 1180px;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
+    font-family: 'Manrope', system-ui, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  section[id] { scroll-margin-top: 84px; }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .section { padding: 112px 0; }
+  .section.soft { background: var(--soft); }
+  .section.aqua { background: var(--aqua-soft); }
+  .section.dark { background: linear-gradient(160deg, #0B6F96 0%, var(--teal-deep) 55%, #0A3D57 100%); color: #fff; }
+
+  .eyebrow {
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--brand-ink);
+    margin: 0 0 18px;
+  }
+  .dark .eyebrow { color: var(--brand-light); }
+
+  h1, h2, h3 { font-family: 'Manrope', sans-serif; color: var(--ink); margin: 0; letter-spacing: -0.025em; }
+  .dark h2, .dark h3 { color: #fff; }
+  h1 { font-weight: 600; font-size: clamp(38px, 5.2vw, 64px); line-height: 1.06; }
+  h2 { font-weight: 600; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; }
+  h3 { font-weight: 600; font-size: 19px; line-height: 1.3; letter-spacing: -0.01em; }
+  .serif { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: 0; color: var(--brand-ink); }
+  .dark .serif { color: var(--brand-light); }
+
+  .lead { font-size: 18.5px; color: var(--muted); max-width: 560px; margin: 22px 0 0; }
+  .dark .lead { color: #C9E6F2; }
+  .head { max-width: 720px; margin-bottom: 64px; }
+  .head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .head.center .lead { margin-left: auto; margin-right: auto; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 15px 26px; border-radius: 999px;
+    font-family: inherit; font-weight: 600; font-size: 15.5px; text-decoration: none;
+    border: 1px solid transparent; cursor: pointer; transition: background .2s, color .2s, border-color .2s;
+  }
+  .btn-primary { background: var(--teal); color: #fff; }
+  .btn-primary:hover { background: var(--teal-hover); }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: rgba(14,34,49,0.22); }
+  .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+  .btn-light { background: #fff; color: var(--ink); }
+  .btn-light { color: var(--teal-deep); }
+  .btn-light:hover { background: var(--aqua); }
+  .btn:focus-visible, a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--brand); outline-offset: 3px;
   }
 
-  section[id] {
-    scroll-margin-top: 92px;
+  /* Nav */
+  .nav {
+    position: fixed; inset: 0 0 auto 0; z-index: 100;
+    background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent; transition: border-color .25s;
+  }
+  .nav.scrolled { border-bottom-color: var(--line); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 24px; }
+  .nav-logo img { height: 46px; width: auto; }
+  .nav-links { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; }
+  .nav-links a { text-decoration: none; font-size: 14.5px; font-weight: 500; color: var(--text); }
+  .nav-links a:hover { color: var(--brand-ink); }
+  .nav-cta { padding: 11px 20px; font-size: 14.5px; }
+  .burger {
+    display: none; width: 46px; height: 46px; border-radius: 12px; border: 1px solid var(--line);
+    background: #fff; align-items: center; justify-content: center; cursor: pointer;
+  }
+  .mobile-nav { display: none; border-top: 1px solid var(--line); background: #fff; padding: 10px 24px 22px; }
+  .mobile-nav.open { display: block; }
+  .mobile-nav a { display: block; padding: 13px 0; text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--line); }
+  .mobile-nav .btn { margin-top: 18px; width: 100%; border-bottom: 0; color: #fff; }
+  @media (max-width: 1040px) {
+    .nav-links, .nav-cta { display: none; }
+    .burger { display: inline-flex; }
   }
 
-  @keyframes lpFloat {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(-16px);
-    }
+  /* Hero */
+  .hero { padding: 156px 0 96px; }
+  .hero-grid { display: grid; grid-template-columns: 1.02fr 1fr; gap: 56px; align-items: center; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .hero-figure {
+    background: radial-gradient(120% 100% at 72% 28%, #CBE9F6 0%, #E4F4FA 45%, #F0F8FC 100%);
+    border-radius: 28px; aspect-ratio: 5 / 4; display: flex; align-items: center; justify-content: center; padding: 28px;
+  }
+  .hero-figure img { width: 100%; height: auto; filter: drop-shadow(0 24px 40px rgba(14,34,49,0.16)); }
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 72px; border-top: 1px solid var(--line); }
+  .fact { padding: 26px 22px 0 0; }
+  .fact + .fact { padding-left: 22px; border-left: 1px solid var(--line); }
+  .fact-num { font-size: 30px; font-weight: 600; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; }
+  .fact-label { font-size: 14.5px; color: var(--muted); margin-top: 6px; }
+  @media (max-width: 900px) {
+    .hero { padding: 120px 0 72px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .facts { grid-template-columns: repeat(2, 1fr); margin-top: 48px; }
+    .fact:nth-child(3) { padding-left: 0; border-left: 0; }
+    .fact { padding-bottom: 22px; }
   }
 
-  input[type="range"].lp-range {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 12px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.16);
-    outline: none;
-    cursor: pointer;
+  /* Trust strip */
+  .trust { background: var(--aqua); }
+  .trust-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px 32px; padding: 26px 24px; }
+  .trust-item { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--text); }
+  .trust-item strong { color: var(--ink); font-weight: 600; }
+  .trust-item svg { flex: none; color: var(--brand-ink); }
+
+  /* Video */
+  .video-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center; }
+  .video-frame { border-radius: 22px; overflow: hidden; background: var(--ink); box-shadow: 0 30px 60px rgba(14,34,49,0.14); }
+  .video-box { position: relative; width: 100%; aspect-ratio: 16 / 9; }
+  .video-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .checklist { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 14px; }
+  .checklist li { display: flex; gap: 14px; align-items: flex-start; }
+  .checklist svg { flex: none; margin-top: 4px; color: var(--brand-ink); }
+  @media (max-width: 900px) {
+    .video-grid { grid-template-columns: 1fr; gap: 40px; }
+    .video-frame { max-width: 420px; width: 100%; margin: 0 auto; }
   }
 
-  input[type="range"].lp-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: #0BA9C2;
-    border: 5px solid #fff;
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.32);
+  /* Steps */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--line); }
+  .step { padding: 32px 28px 0 0; }
+  .step + .step { padding-left: 28px; border-left: 1px solid var(--line); }
+  .step-num { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 40px; color: var(--brand-ink); line-height: 1; margin-bottom: 22px; }
+  .step p { color: var(--muted); font-size: 16px; margin: 12px 0 0; }
+  @media (max-width: 960px) {
+    .steps { grid-template-columns: 1fr 1fr; }
+    .step:nth-child(3) { padding-left: 0; border-left: 0; }
+    .step { padding-bottom: 36px; }
+  }
+  @media (max-width: 600px) {
+    .steps { grid-template-columns: 1fr; }
+    .step + .step { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
   }
 
-  input[type="range"].lp-range::-moz-range-thumb {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: #0BA9C2;
-    border: 5px solid #fff;
-    cursor: pointer;
+  /* Features */
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .feature { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 34px 30px; }
+  .feature-icon {
+    width: 48px; height: 48px; border-radius: 14px; background: var(--teal); color: #fff;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 24px;
+  }
+  .feature p { color: var(--muted); font-size: 16px; margin: 10px 0 0; }
+  @media (max-width: 960px) { .features { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .features { grid-template-columns: 1fr; } }
+
+  /* Compatibility */
+  .compat { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .compat-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 18px 24px; background: #fff; }
+  .compat-card img { width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 12px; background: #fff; margin-bottom: 18px; }
+  .tag { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em; padding: 5px 11px; border-radius: 999px; margin-bottom: 12px; }
+  .tag.ok { background: #E4F4FA; color: #0B6F96; }
+  .tag.no { background: #F6E9E5; color: #8A3A26; }
+  .compat-card p { font-size: 14.5px; color: var(--muted); margin: 8px 0 0; line-height: 1.55; }
+  .compat-card.is-no img { opacity: 0.75; }
+  .note {
+    margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px;
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 30px;
+  }
+  .note p { margin: 0; color: var(--text); }
+  @media (max-width: 960px) { .compat { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .compat { grid-template-columns: 1fr; } }
+
+  /* Reviews */
+  .rating-row { display: flex; align-items: center; gap: 16px; margin-top: 26px; }
+  .rating-row .score { font-size: 40px; font-weight: 600; color: var(--ink); letter-spacing: -0.02em; line-height: 1; }
+  .rating-row .meta { font-size: 14.5px; color: var(--muted); line-height: 1.45; }
+  .stars { color: #C9962B; letter-spacing: 3px; font-size: 14px; }
+  .reviews { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .review { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 34px 32px; display: flex; flex-direction: column; margin: 0; }
+  .review blockquote { margin: 16px 0 26px; font-size: 18px; line-height: 1.6; color: var(--ink); flex: 1; }
+  .review figcaption { display: flex; align-items: center; gap: 14px; font-size: 15px; }
+  .avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--aqua); color: var(--teal); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px; flex: none; }
+  .review .who { font-weight: 600; color: var(--ink); }
+  .review .where { color: var(--muted); font-size: 14px; }
+  @media (max-width: 760px) { .reviews { grid-template-columns: 1fr; } }
+
+  /* Calculator */
+  .calc { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .calc-field { margin-bottom: 34px; }
+  .calc-field label { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 14px; font-weight: 500; color: #E4F4FA; font-size: 16px; }
+  .calc-field output { font-weight: 600; color: #fff; font-size: 18px; }
+  .range-ends { display: flex; justify-content: space-between; font-size: 13px; color: #A9D3E6; margin-top: 8px; }
+  input[type="range"].range {
+    -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 999px;
+    background: rgba(255,255,255,0.22); outline-offset: 6px; cursor: pointer; margin: 0;
+  }
+  input[type="range"].range::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none; width: 26px; height: 26px; border-radius: 50%;
+    background: #fff; border: 6px solid var(--brand); cursor: pointer;
+  }
+  input[type="range"].range::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 5px solid var(--brand); cursor: pointer; }
+  .calc-note { font-size: 13.5px; color: #A9D3E6; margin: 0; }
+  .calc-results { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: 22px; padding: 36px; }
+  .calc-row { padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,0.10); }
+  .calc-row:first-child { padding-top: 0; }
+  .calc-row:last-of-type { border-bottom: 0; }
+  .calc-label { font-size: 14.5px; color: #C9E6F2; }
+  .calc-value { font-size: 40px; font-weight: 600; color: #fff; letter-spacing: -0.02em; line-height: 1.15; margin-top: 4px; }
+  .calc-value.accent { color: var(--brand-light); }
+  .calc-results .btn { width: 100%; margin-top: 14px; }
+  .eco { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 88px; border-top: 1px solid rgba(255,255,255,0.12); }
+  .eco div { padding: 30px 28px 0 0; }
+  .eco div + div { padding-left: 28px; border-left: 1px solid rgba(255,255,255,0.12); }
+  .eco strong { display: block; font-size: 30px; font-weight: 600; color: #fff; letter-spacing: -0.02em; }
+  .eco span { display: block; color: #C9E6F2; font-size: 15px; margin-top: 6px; }
+  .eco small { display: block; color: #A9D3E6; font-size: 12.5px; margin-top: 10px; letter-spacing: 0.04em; }
+  @media (max-width: 900px) {
+    .calc { grid-template-columns: 1fr; gap: 32px; }
+    .eco { grid-template-columns: 1fr; margin-top: 56px; }
+    .eco div + div { padding-left: 0; border-left: 0; border-top: 1px solid rgba(255,255,255,0.12); margin-top: 26px; }
   }
 
-  .lp-navlinks {
-    display: flex;
-    gap: 28px;
-    align-items: center;
+  /* Specs */
+  .specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .specs-figure { background: var(--aqua); border-radius: 24px; padding: 32px; }
+  .spec-table { width: 100%; border-collapse: collapse; margin-top: 36px; }
+  .spec-table th, .spec-table td { text-align: left; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 16px; vertical-align: top; }
+  .spec-table th { font-weight: 500; color: var(--muted); width: 42%; }
+  .spec-table td { font-weight: 600; color: var(--ink); }
+  @media (max-width: 900px) { .specs-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+  /* Technical */
+  .tech { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .tech figure { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .tech figure img { width: 100%; aspect-ratio: 16 / 10; object-fit: contain; background: #fff; }
+  .tech figcaption { padding: 18px 22px; font-size: 15px; color: var(--muted); border-top: 1px solid var(--line); }
+  .tech figcaption strong { color: var(--ink); font-weight: 600; }
+  .tech .wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
+  .tech .wide img { aspect-ratio: auto; height: 100%; max-height: 520px; object-fit: contain; }
+  .tech .wide figcaption { border-top: 0; border-left: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; padding: 36px; }
+  .dims { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 22px; }
+  .dims div { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .dims b { display: block; font-size: 22px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .dims span { font-size: 13.5px; color: var(--muted); }
+  @media (max-width: 760px) {
+    .tech { grid-template-columns: 1fr; }
+    .tech .wide { grid-template-columns: 1fr; }
+    .tech .wide figcaption { border-left: 0; border-top: 1px solid var(--line); padding: 26px 22px; }
   }
 
-  .lp-burger {
-    display: none;
+  /* FAQ */
+  .faq-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 64px; align-items: start; }
+  .faq-list { border-top: 1px solid var(--line); }
+  .faq-list details { border-bottom: 1px solid var(--line); }
+  .faq-list summary {
+    list-style: none; cursor: pointer; padding: 24px 0; display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    font-weight: 600; font-size: 17.5px; color: var(--ink);
+  }
+  .faq-list summary::-webkit-details-marker { display: none; }
+  .faq-list summary .plus { flex: none; width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--line); position: relative; }
+  .faq-list summary .plus::before, .faq-list summary .plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 10px; height: 1.5px; background: var(--ink); transform: translate(-50%, -50%); transition: transform .2s; }
+  .faq-list summary .plus::after { transform: translate(-50%, -50%) rotate(90deg); }
+  .faq-list details[open] summary .plus::after { transform: translate(-50%, -50%) rotate(0deg); }
+  .faq-list .answer { padding: 0 48px 26px 0; color: var(--muted); font-size: 16px; }
+  .faq-list .answer p { margin: 0; }
+  @media (max-width: 900px) { .faq-grid { grid-template-columns: 1fr; gap: 32px; } .faq-list .answer { padding-right: 0; } }
+
+  /* Pricing */
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+  .plan { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 38px 32px; display: flex; flex-direction: column; }
+  .plan.featured { border: 1.5px solid var(--teal); box-shadow: 0 24px 50px rgba(10,122,163,0.14); }
+  .badge { position: absolute; top: -13px; left: 32px; background: var(--teal); color: #fff; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; padding: 6px 14px; border-radius: 999px; }
+  .plan-sub { color: var(--muted); font-size: 15px; margin: 6px 0 0; min-height: 50px; }
+  .price { display: flex; align-items: baseline; gap: 6px; margin: 22px 0 6px; }
+  .price b { font-size: 46px; font-weight: 600; color: var(--ink); letter-spacing: -0.03em; line-height: 1; }
+  .price span { color: var(--muted); font-size: 15px; }
+  .plan-copy { color: var(--muted); font-size: 15px; margin: 8px 0 24px; }
+  .plan ul { list-style: none; padding: 24px 0 0; margin: 0 0 30px; border-top: 1px solid var(--line); display: grid; gap: 12px; flex: 1; }
+  .plan li { display: flex; gap: 12px; align-items: flex-start; font-size: 15.5px; }
+  .plan li svg { flex: none; margin-top: 5px; color: var(--brand-ink); }
+  .plan .btn { width: 100%; }
+  .pay { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 28px; margin-top: 40px; font-size: 14.5px; color: var(--muted); }
+  .pay span { display: inline-flex; align-items: center; gap: 8px; }
+  @media (max-width: 960px) { .plans { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; } .plan-sub { min-height: 0; } }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .contact-list { list-style: none; padding: 0; margin: 36px 0 0; border-top: 1px solid var(--line); }
+  .contact-list li { padding: 20px 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .contact-list .k { color: var(--muted); font-size: 15px; }
+  .contact-list .v { color: var(--ink); font-weight: 600; text-decoration: none; }
+  .contact-list a.v:hover { color: var(--brand-ink); }
+  .form { background: var(--aqua); border-radius: 24px; padding: 38px; display: grid; gap: 18px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .form label { display: block; font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .form input, .form select, .form textarea {
+    width: 100%; font-family: inherit; font-size: 16px; color: var(--ink); background: #fff;
+    border: 1px solid rgba(14,34,49,0.16); border-radius: 12px; padding: 14px 16px;
+  }
+  .form textarea { min-height: 120px; resize: vertical; }
+  .form .btn { width: 100%; margin-top: 6px; }
+  .form-hint { font-size: 13.5px; color: var(--muted); margin: 0; text-align: center; }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+  @media (max-width: 520px) { .form { padding: 26px 20px; } .form-row { grid-template-columns: 1fr; } }
+
+  /* Footer */
+  .footer { background: var(--ink); color: #B7C6CA; padding: 80px 0 36px; font-size: 15px; }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; }
+  .footer img { height: 54px; width: auto; margin-bottom: 18px; }
+  .footer h4 { color: #fff; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 18px; }
+  .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .footer a { text-decoration: none; color: #B7C6CA; }
+  .footer a:hover { color: #fff; }
+  .footer-bottom { margin-top: 64px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,0.10); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13.5px; color: #9FB3B8; }
+  @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
+
+  /* Floating WhatsApp */
+  .wa-float {
+    position: fixed; right: 20px; bottom: 20px; z-index: 90; width: 56px; height: 56px; border-radius: 50%;
+    background: #1F8F55; color: #fff; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 12px 28px rgba(14,34,49,0.25);
   }
 
-  @media (max-width: 1000px) {
-    .lp-navlinks {
-      display: none;
-    }
-
-    .lp-burger {
-      display: inline-flex !important;
-    }
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    .section { padding: 80px 0; }
+    .head { margin-bottom: 44px; }
+    .wrap { padding: 0 16px; }
+    .trust-inner { padding: 22px 16px; }
   }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .ripple circle { animation: none !important; } }
 
-  @media (max-width: 768px) {
-    #tech .tech-grid {
-      grid-template-columns: 1fr !important;
-      gap: 22px !important;
-    }
-
-    #tech .tech-card {
-      height: auto !important;
-      min-height: 330px;
-    }
-  }
-
-
-
+  /* Agua */
+  ::selection { background: #C6E9F6; color: var(--ink); }
+  .wave { line-height: 0; margin-top: -1px; }
+  .wave svg { display: block; width: 100%; height: 56px; }
+  .hero { background: linear-gradient(180deg, #E2F3FA 0%, #F1F9FD 55%, #FFFFFF 100%); position: relative; overflow: hidden; }
+  .hero-figure { position: relative; overflow: hidden; }
+  .hero-figure img { position: relative; z-index: 1; }
+  .ripple { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+  .ripple circle { fill: none; stroke: #0089BA; transform-origin: 50% 50%; animation: ripple 9s ease-out infinite; opacity: 0; }
+  .ripple circle:nth-child(2) { animation-delay: 3s; }
+  .ripple circle:nth-child(3) { animation-delay: 6s; }
+  @keyframes ripple { 0% { transform: scale(0.35); opacity: 0.35; } 100% { transform: scale(1.25); opacity: 0; } }
+  .trust { background: var(--teal); }
+  .trust-item, .trust-item strong { color: #fff; }
+  .trust-item svg { color: #C6E9F6; }
+  .section.aqua2 { background: #E4F4FA; }
+  .feature { background: linear-gradient(180deg, #FFFFFF 0%, #F2F9FD 100%); border-color: rgba(10,122,163,0.14); }
+  .compat-card, .review, .tech figure, .plan { border-color: rgba(10,122,163,0.14); }
+  .faq-list details[open] summary { color: var(--teal); }
+  .faq-list details[open] summary .plus { background: var(--teal); border-color: var(--teal); }
+  .faq-list details[open] summary .plus::before, .faq-list details[open] summary .plus::after { background: #fff; }
+  .step-num { color: var(--teal); }
+  .facts { border-top-color: rgba(10,122,163,0.18); }
+  .fact-num { color: var(--teal-deep); }
+  .footer { background: linear-gradient(180deg, #0C4F70 0%, #0A3D57 100%); color: #C9E6F2; }
+  .footer a { color: #C9E6F2; }
+  .footer-bottom { color: #A9D3E6; border-top-color: rgba(255,255,255,0.14); }
 </style>
-
 </head>
-<body>
-<div style="--accent:#0BA9C2;font-family:'Mulish',sans-serif;color:#0F2227;background:#ffffff;overflow-x:hidden;-webkit-font-smoothing:antialiased" id="top">
+<body id="top">
 
- 
- <nav id="mainNav" style="position:fixed;top:0;left:0;right:0;width:100%;z-index:9999;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(15,34,39,0.08);transition:transform 0.35s ease, opacity 0.35s ease;transform:translateY(0);opacity:1">
-    <div style="max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px">
-      <a href="#top" style="display:flex;align-items:center;flex:none"><img src="../assets/logo-primario.png" alt="Lavapopo" style="height:54px;width:auto;display:block"></a>
-      <div class="lp-navlinks">
-<a href="#manualdeinstalacion" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Instalación</a>
-<a href="#how" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Funcionamiento</a>
-<a href="#features" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Beneficios</a>
-<a href="#compat" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Compatibilidad</a>
-<a href="#reviews" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Clientes</a>
-<a href="#calculator" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Calculadora</a>
-<a href="#specs" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Especificaciones</a>
-<a href="#faq" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">FAQ</a>
-<a href="#pricing" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Precios</a>
-<a href="#contact" style="text-decoration:none;color:#28383c;font-weight:600;font-size:15px">Contacto</a>
-<a href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20quiero%20comprar%20mi%20Lavapopo."
-
-target="_blank"
-rel="noopener noreferrer"
-
- style="text-decoration:none;background:#0BA9C2;color:#fff;font-weight:800;font-size:14.5px;padding:11px 20px;border-radius:999px;box-shadow:0 6px 16px rgba(11,169,194,0.32)">Quiero el mío</a>
-      </div>
-      <button class="lp-burger" id="burgerBtn" style="border:1.5px solid rgba(15,34,39,0.16);background:#fff;border-radius:12px;width:46px;height:46px;align-items:center;justify-content:center;cursor:pointer;font-size:20px;color:#0F2227">☰</button>
-    </div>
-    <div id="mobileNav" style="display:none;border-top:1px solid rgba(15,34,39,0.08);background:#fff;padding:14px 24px">
-      <div style="display:flex;flex-direction:column;gap:6px">
- <a href="#manualdeinstalacion" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Manual de Instalación</a>
-  <a href="#how" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Cómo funciona</a>
-  <a href="#features" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Beneficios</a>
-  <a href="#compat" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Compatibilidad</a>
-  <a href="#reviews" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Reseñas reales</a>
-  <a href="#calculator" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Calculadora</a>
-  <a href="#specs" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Especificaciones</a>
-  <a href="#faq" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Preguntas frecuentes</a>
-  <a href="#pricing" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Precios</a>
-  <a href="#contact" style="text-decoration:none;color:#28383c;font-weight:600;padding:9px 0">Contacto</a>
-        <a href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20quiero%20comprar%20mi%20Lavapopo." 
-
-target="_blank"
-  rel="noopener noreferrer"
-
-style="text-decoration:none;background:#0BA9C2;color:#fff;font-weight:800;text-align:center;padding:13px;border-radius:999px;margin-top:6px">Quiero el mío</a>
-      </div>
-    </div>
-  </nav>
-  <div style="height:79px"></div>
-
-
-  <!-- HERO -->
-  <header style="background:#0BA9C2;color:#fff;position:relative;overflow:hidden">
-    <div style="max-width:1200px;margin:0 auto;padding:72px 24px 84px;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:48px;align-items:center">
-      <div>
-        <div style="display:inline-block;background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.3);padding:7px 16px;border-radius:999px;font-weight:700;font-size:13.5px;letter-spacing:0.02em;margin-bottom:24px">💩 Sí, vamos a hablar de eso.</div>
-        <h1 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(38px,5.4vw,62px);line-height:1.02;margin:0 0 22px;letter-spacing:-0.02em">Llevas 30 años limpiándote <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0F2227">mal</em>. No es tu culpa.</h1>
-        <p style="font-size:18.5px;line-height:1.6;max-width:540px;margin:0 0 32px;color:rgba(255,255,255,0.94)">El papel seco no limpia: solo embarra. El agua sí. Lavapopo se instala en tu inodoro en <strong>15 minutos</strong>, funciona sin electricidad y le devuelve a tu trasero la dignidad que el papel le quitó. Sin obras, sin gasfitero, sin dramas.</p>
-        <div style="display:flex;gap:14px;flex-wrap:wrap">
-          <a href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20quiero%20comprar%20mi%20Lavapopo." 
-
- target="_blank"
-  rel="noopener noreferrer"
-
-style="text-decoration:none;background:#0F2227;color:#fff;font-weight:800;font-size:16px;padding:16px 28px;border-radius:999px;box-shadow:0 10px 26px rgba(15,34,39,0.28)">Quiero el mío · S/ 140</a>
-          <a href="#how" style="text-decoration:none;background:rgba(255,255,255,0.14);border:1.5px solid rgba(255,255,255,0.55);color:#fff;font-weight:700;font-size:16px;padding:16px 28px;border-radius:999px">Ver cómo funciona</a>
-        </div>
-        <div style="display:flex;gap:34px;flex-wrap:wrap;margin-top:42px">
-          <div><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:30px;line-height:1">15 min</div><div style="font-size:14px;opacity:0.9;margin-top:3px">De instalación</div></div>
-          <div style="width:1px;background:rgba(255,255,255,0.28)"></div>
-          <div><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:30px;line-height:1">0 watts</div><div style="font-size:14px;opacity:0.9;margin-top:3px">Sin electricidad</div></div>
-          <div style="width:1px;background:rgba(255,255,255,0.28)"></div>
-          <div><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:30px;line-height:1">S/ 700+</div><div style="font-size:14px;opacity:0.9;margin-top:3px">Ahorro al año</div></div>
-        </div>
-      </div>
-      <div style="display:flex;justify-content:center;align-items:center">
-        <img src="../assets/product-detail.png" alt="Lavapopo bidé de mano" style="width:100%;max-width:680px;height:auto;animation:lpFloat 6s ease-in-out infinite;filter:drop-shadow(0 22px 45px rgba(15,34,39,0.28))">
-      </div>
-    </div>
-  </header>
-
-  <!-- VIDEO + PROOF -->
-  <section id="manualdeinstalacion" style="background:#FAF6EE;padding:84px 24px">
-    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:44px;align-items:center">
-      <div>
-        <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">Instalación · 1:20</div>
-        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(28px,3.4vw,40px);line-height:1.08;margin:0 0 16px;letter-spacing:-0.02em">Instálalo tu mismo.</h2>
-        <p style="font-size:17px;line-height:1.6;color:#4a5a5e;margin:0">Instalación paso a paso, sin gasfitero y sin obras. Mira el video y comprueba lo fácil que es jubilar el papel.</p>
-      </div>
-
-
-<div style="border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(15,34,39,0.16);background:#0F2227">
-
-  <div id="manualVideoContainer"
-       style="position:relative;width:100%;aspect-ratio:16/9;background:#0F2227">
-
-    <iframe
-      id="manualVideo"
-      src=""
-      title="Manual de instalación de Lavapopo"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-      style="position:absolute;inset:0;width:100%;height:100%;border:0">
-    </iframe>
-
+<!-- ============ NAV ============ -->
+<header class="nav" id="mainNav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="nav-logo"><img src="../assets/logo-primario.png" alt="Lavapopo" width="64" height="46"></a>
+    <nav aria-label="Principal">
+      <ul class="nav-links">
+        <li><a href="#manualdeinstalacion">Instalación</a></li>
+        <li><a href="#how">Cómo se usa</a></li>
+        <li><a href="#features">Beneficios</a></li>
+        <li><a href="#compat">Compatibilidad</a></li>
+        <li><a href="#specs">Especificaciones</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+        <li><a href="#pricing">Precios</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="#pricing">Comprar · S/ 140</a>
+    <button class="burger" id="burgerBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
   </div>
-
-</div>
-
-</div>
-
-
-    <div style="max-width:1200px;margin:56px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px">
-      <div style="background:#fff;border-radius:18px;padding:26px;text-align:center;border:1px solid rgba(15,34,39,0.07)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:34px;color:#0BA9C2">+5,000</div><div style="color:#4a5a5e;font-weight:600;margin-top:4px">Poperos exigentes 💩</div></div>
-      <div style="background:#fff;border-radius:18px;padding:26px;text-align:center;border:1px solid rgba(15,34,39,0.07)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:34px;color:#0BA9C2">4.9/5</div><div style="color:#4a5a5e;font-weight:600;margin-top:4px">Estrellas reales</div></div>
-      <div style="background:#fff;border-radius:18px;padding:26px;text-align:center;border:1px solid rgba(15,34,39,0.07)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:34px;color:#0BA9C2">15 min</div><div style="color:#4a5a5e;font-weight:600;margin-top:4px">Instalación promedio</div></div>
-      <div style="background:#fff;border-radius:18px;padding:26px;text-align:center;border:1px solid rgba(15,34,39,0.07)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:34px;color:#0BA9C2">1 año</div><div style="color:#4a5a5e;font-weight:600;margin-top:4px">Garantía oficial</div></div>
-    </div>
-  </section>
-
-
-
-<!-- COMO FUNCIONA -->
-<section id="how" style="background:#fff;padding:96px 24px">
-
-  <div style="max-width:1200px;margin:0 auto">
-
-    <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">
-      01 · Cómo funciona
-    </div>
-
-    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;max-width:760px;letter-spacing:-0.02em">
-      Usarlo es más fácil que  
-      <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">
-        desenrollar el papel higiénico
-      </em>.
-    </h2>
-
-    <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:640px;margin:0 0 48px">
-      Te sientas, haces lo que tengas que hacer. Giras la perilla. Te lavas el trasero (spoiler: puedes continuar navegando en Tiktok mientras te limpias, tus manos están libres). 
-      	Al finalizar cierras la perilla, coges un sólo pedazo de papel y te secas el agua residual. Fin del asunto.
-    </p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px">
-
-      <!-- INICIO FICHA 01 -->
-      <div style="background:#FAF6EE;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.06)">
-
-        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.1em;color:#0BA9C2;margin-bottom:14px">
-          PASO 01
-        </div>
-
-        <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;margin:0 0 10px;line-height:1.2">
-          Siéntate en el inodoro como siempre.
-        </h3>
-
-        <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">
-          Siéntate y haz tus necesidades como siempre lo haces, Lavapopo no te quita espacio, ni siquiera vas a sentir su presencia hasta terminar.
-        </p>
-
-      </div>
-      <!-- FIN FICHA 01 -->
-
-
-      <!-- INICIO FICHA 02 -->
-      <div style="background:#FAF6EE;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.06)">
-
-        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.1em;color:#0BA9C2;margin-bottom:14px">
-          PASO 02
-        </div>
-
-        <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;margin:0 0 10px;line-height:1.2">
-          Límpiate con agua.
-        </h3>
-
-        <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">
-          Cuando sientas que ya terminaste, giras la perilla de Lavapopo y vas aumentando gradualmente la cantidad de agua con el giro de la perilla. Sentirás el chorro de agua suave en tu trasero justo en el punto donde se necesita limpieza.
-        </p>
-
-      </div>
-      <!-- FIN FICHA 02 -->
-
-
-      <!-- INICIO FICHA 03 -->
-      <div style="background:#FAF6EE;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.06)">
-
-        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.1em;color:#0BA9C2;margin-bottom:14px">
-          PASO 03
-        </div>
-
-        <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;margin:0 0 10px;line-height:1.2">
-          Mueve un poco tu trasero. 
-        </h3>
-
-        <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">
-          Puedes mover un poco tu trasero, sin tener que levantarte del inodoro si necesitas que te limpie algunas zonas aledañas al centro del asunto.
-        </p>
-
-      </div>
-      <!-- FIN FICHA 03 -->
-
-
-      <!-- INICIO FICHA 04 -->
-      <div style="background:#FAF6EE;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.06)">
-
-        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.1em;color:#0BA9C2;margin-bottom:14px">
-          PASO 04
-        </div>
-
-        <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;margin:0 0 10px;line-height:1.2">
-          Cierra la perilla. Sécate. ¡Listo!
-        </h3>
-
-        <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">
-          Gira la perilla para cerrar el agua. Coge un solo pedazo de papel higiénico y sécate las gotas de agua que pueden haber quedado en tu trasero. ¡Listo ya terminaste! Tu trasero te lo agradecerá.
-        </p>
-
-      </div>
-      <!-- FIN FICHA 04 -->
-
-    </div>
-
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#manualdeinstalacion">Manual de instalación</a>
+    <a href="#how">Cómo se usa</a>
+    <a href="#features">Beneficios</a>
+    <a href="#compat">Compatibilidad</a>
+    <a href="#reviews">Opiniones de clientes</a>
+    <a href="#calculator">Calculadora de ahorro</a>
+    <a href="#specs">Especificaciones</a>
+    <a href="#faq">Preguntas frecuentes</a>
+    <a href="#pricing">Precios</a>
+    <a href="#contact">Contacto</a>
+    <a class="btn btn-primary" href="#pricing">Comprar · S/ 140</a>
   </div>
+</header>
 
-</section>
-<!-- FIN COMO FUNCIONA -->
+<main>
 
-
-  <!-- BENEFICIOS -->
-  <section id="features" style="background:#FAF6EE;padding:96px 24px">
-    <div style="max-width:1200px;margin:0 auto">
-      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">02 · Beneficios</div>
-      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;max-width:700px;letter-spacing:-0.02em">Diseñado para <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">poperos exigentes</em>.</h2>
-      <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:660px;margin:0 0 48px">Lavapopo no necesita enchufes, baterías, productos químicos ni curso de uso. Solo agua de tu red, una perilla y un trasero dispuesto a evolucionar. El papel cumplió. Es hora de jubilarlo.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
-        <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.07)">
-          <div style="width:46px;height:46px;border-radius:13px;background:rgba(11,169,194,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><span style="width:16px;height:16px;border-radius:5px;background:#0BA9C2;display:block"></span></div>
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 10px;line-height:1.25">Cero enchufes, cero baterías</h3>
-          <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">Funciona con la presión del agua que ya tienes en casa. Si tu inodoro carga, Lavapopo limpia.</p>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Higiene con agua · Sin electricidad</p>
+        <h1>Una limpieza más completa, <span class="serif">con agua.</span></h1>
+        <p class="lead">El papel seco no limpia por completo. Lavapopo es un accesorio para inodoro que limpia con un chorro de agua regulable. Se instala en 15 minutos, no necesita electricidad ni obras y funciona con la conexión de agua que ya tienes.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#pricing">Comprar · S/ 140</a>
+          <a class="btn btn-ghost" href="#manualdeinstalacion">Ver la instalación</a>
         </div>
-        <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.07)">
-          <div style="width:46px;height:46px;border-radius:13px;background:rgba(11,169,194,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><span style="width:16px;height:16px;border-radius:5px;background:#0BA9C2;display:block"></span></div>
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 10px;line-height:1.25">La boquilla se limpia sola</h3>
-          <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">Antes y después de cada uso, agua corre por la boquilla. Tú no tocas nada. Higiene de hospital.</p>
-        </div>
-        <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.07)">
-          <div style="width:46px;height:46px;border-radius:13px;background:rgba(11,169,194,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><span style="width:16px;height:16px;border-radius:5px;background:#0BA9C2;display:block"></span></div>
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 10px;line-height:1.25">Tú mandas en la presión</h3>
-          <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">Una perilla. Suave para los niños, firme para los adultos exigentes. El agua hace el resto.</p>
-        </div>
-        <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.07)">
-          <div style="width:46px;height:46px;border-radius:13px;background:rgba(11,169,194,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><span style="width:16px;height:16px;border-radius:5px;background:#0BA9C2;display:block"></span></div>
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 10px;line-height:1.25">Sin llamar al gasfitero</h3>
-          <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">Una llave inglesa y un desarmador, 15 minutos. Si te aburres a mitad, lo terminas mañana. Es así de fácil.</p>
-        </div>
-        <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.07)">
-          <div style="width:46px;height:46px;border-radius:13px;background:rgba(11,169,194,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><span style="width:16px;height:16px;border-radius:5px;background:#0BA9C2;display:block"></span></div>
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 10px;line-height:1.25">Agua, no papel</h3>
-          <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">Sin químicos, sin papel, sin "ya está, creo". Si te lavarías las manos con papel seco, sigue con papel. Si no, ya entendiste.</p>
-        </div>
-        <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid rgba(15,34,39,0.07)">
-          <div style="width:46px;height:46px;border-radius:13px;background:rgba(11,169,194,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><span style="width:16px;height:16px;border-radius:5px;background:#0BA9C2;display:block"></span></div>
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 10px;line-height:1.25">Como hotel cinco estrellas</h3>
-          <p style="font-size:15.5px;line-height:1.55;color:#4a5a5e;margin:0">Los hoteles caros del mundo lo usan por algo. Tu casa en Perú también puede.</p>
-        </div>
+      </div>
+      <div class="hero-figure">
+        <svg class="ripple" viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="200" cy="160" r="150" stroke-width="1.2"/><circle cx="200" cy="160" r="150" stroke-width="1.2"/><circle cx="200" cy="160" r="150" stroke-width="1.2"/></svg>
+        <img src="../assets/product-detail.png" alt="Lavapopo, accesorio de higiene con agua para inodoro, con perilla de control lateral" width="1200" height="753">
       </div>
     </div>
-  </section>
 
-  <!-- COMPATIBILIDAD -->
-  <section id="compat" style="background:#fff;padding:96px 24px">
-    <div style="max-width:1200px;margin:0 auto">
-      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">03 · Compatibilidad</div>
-      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">¿Funciona en <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">tu inodoro</em>?</h2>
-      <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:640px;margin:0 0 48px">Diseñado para los inodoros más comunes en Perú. Si no estás seguro, mándanos una foto al WhatsApp y te respondemos en minutos.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px">
-        <div style="background:#FAF6EE;border-radius:20px;padding:22px;border:1px solid rgba(15,34,39,0.06);text-align:center">
-          <div role="img" aria-label="One-piece recto" style="background-color:#fff;border-radius:14px;height:170px;margin-bottom:16px;background-image:url(../assets/toilet-1.png);background-size:contain;background-repeat:no-repeat;background-position:center"></div>
-          <div style="display:inline-block;background:rgba(11,169,194,0.14);color:#0a7a8c;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:999px;margin-bottom:10px">✓ Compatible</div>
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0 0 8px">One-piece recto</h3>
-          <p style="font-size:14px;line-height:1.5;color:#4a5a5e;margin:0">El asiento y tanque forman ángulo de 90°.</p>
-        </div>
-        <div style="background:#FAF6EE;border-radius:20px;padding:22px;border:1px solid rgba(15,34,39,0.06);text-align:center">
-          <div role="img" aria-label="Dos piezas clásico" style="background-color:#fff;border-radius:14px;height:170px;margin-bottom:16px;background-image:url(../assets/toilet-2.png);background-size:contain;background-repeat:no-repeat;background-position:center"></div>
-          <div style="display:inline-block;background:rgba(11,169,194,0.14);color:#0a7a8c;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:999px;margin-bottom:10px">✓ Compatible</div>
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0 0 8px">Dos piezas clásico</h3>
-          <p style="font-size:14px;line-height:1.5;color:#4a5a5e;margin:0">El asiento y tanque forman ángulo de 90°.</p>
-        </div>
-        <div style="background:#FAF6EE;border-radius:20px;padding:22px;border:1px solid rgba(15,34,39,0.06);text-align:center">
-          <div role="img" aria-label="One-piece recto" style="background-color:#fff;border-radius:14px;height:170px;margin-bottom:16px;background-image:url(../assets/toilet-3.png);background-size:contain;background-repeat:no-repeat;background-position:center"></div>
-          <div style="display:inline-block;background:rgba(11,169,194,0.14);color:#0a7a8c;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:999px;margin-bottom:10px">✓ Compatible</div>
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0 0 8px">One-piece recto</h3>
-          <p style="font-size:14px;line-height:1.5;color:#4a5a5e;margin:0">El asiento y tanque forman ángulo de 90°.</p>
-        </div>
-        <div style="background:#FAF6EE;border-radius:20px;padding:22px;border:1px solid rgba(15,34,39,0.06);text-align:center">
-          <div role="img" aria-label="One-piece Curvado" style="background-color:#fff;border-radius:14px;height:170px;margin-bottom:16px;background-image:url(../assets/toilet-4.png);background-size:contain;background-repeat:no-repeat;background-position:center"></div>
-          <div style="display:inline-block;background:rgba(214,90,70,0.14);color:#b54a37;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:999px;margin-bottom:10px">✕ No compatible</div>
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0 0 8px">One-piece Curvado</h3>
-          <p style="font-size:14px;line-height:1.5;color:#4a5a5e;margin:0">El asiento y el tanque NO forman ángulo de 90°. No permite la instalación de Lavapopo.</p>
-        </div>
-      </div>
-      <div style="background:#0F2227;color:#fff;border-radius:20px;padding:26px 30px;margin-top:30px;font-size:16px;line-height:1.55">
-        <strong>¿No estás seguro?</strong> Mándanos una foto al WhatsApp <a href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20quiero%20saber%20si%20mi%20inodoro%20es%20compatible."
-
- target="_blank"
-  rel="noopener noreferrer"
-
- style="color:#0BA9C2;font-weight:800;text-decoration:none">951 540 663</a> y te confirmamos si Lavapopo encaja en tu baño. (Una foto del inodoro, por favor.)
-      </div>
-    </div>
-  </section>
-
-
-
-<!-- RESEÑAS -->
-<section id="reviews" style="background:#FAF6EE;padding:96px 24px">
-  <div style="max-width:1200px;margin:0 auto">
-
-    <!-- Encabezado -->
-    <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">
-      04 · Reseñas reales
-    </div>
-
-    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">
-      Lo que dicen los 
-      <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">
-        poperos
-      </em>.
-    </h2>
-
-    <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:660px;margin:0 0 48px">
-      Familias en Lima, Arequipa, Trujillo y Cusco ya jubilaron el papel higiénico. 
-      Estas son algunas de las cosas que nos cuentan.
-    </p>
-
-    <!-- Grid de reseñas -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px">
-
-      <!-- Reseña 1 -->
-      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
-        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
-          ★★★★★
-        </div>
-
-        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
-          Lo instalé en menos de 20 minutos sin llamar al gasfitero. Mi familia ya no quiere un baño sin Lavapopo.
-        </p>
-
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
-            CM
-          </div>
-
-          <div>
-            <div style="font-weight:800;font-size:15px">
-              Carla Mendoza
-            </div>
-            <div style="font-size:13px;color:#7a8a8e">
-              Lima · Surco
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Reseña 2 -->
-      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
-        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
-          ★★★★★
-        </div>
-
-        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
-          Lo ví en Japón en un viaje y siempre quise uno. Lavapopo me dio lo mismo sin gastar 4 mil soles ni romper el baño.
-        </p>
-
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
-            RT
-          </div>
-
-          <div>
-            <div style="font-weight:800;font-size:15px">
-              Rodrigo Tapia
-            </div>
-            <div style="font-size:13px;color:#7a8a8e">
-              Arequipa
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Reseña 3 -->
-      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
-        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
-          ★★★★★
-        </div>
-
-        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
-          Sufro de hemorroides. El papel me dejaba la zona irritada por días. Con Lavapopo se acabó el ardor. Hasta mi médico lo recomendó.
-        </p>
-
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
-            JR
-          </div>
-
-          <div>
-            <div style="font-weight:800;font-size:15px">
-              Jorge Ramos
-            </div>
-            <div style="font-size:13px;color:#7a8a8e">
-              Lima · San Borja
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Reseña 4 -->
-      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
-        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
-          ★★★★★
-        </div>
-
-        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
-          Mi trasero nunca había estado tan contento. Ya lo dije.
-        </p>
-
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
-            MT
-          </div>
-
-          <div>
-            <div style="font-weight:800;font-size:15px">
-              Marco T.
-            </div>
-            <div style="font-size:13px;color:#7a8a8e">
-              Lima · Miraflores
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Reseña 5 -->
-      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
-        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
-          ★★★★★
-        </div>
-
-        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
-          Ya tengo mi Lavapopo hace 2 años. Ahora cada vez que viajo y me quedo en un hotel, extraño demasiado el Lavapopo. Limpiarse solo con papel ya no se siente igual, se siente la suciedad.
-        </p>
-
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
-            AL
-          </div>
-
-          <div>
-            <div style="font-weight:800;font-size:15px">
-              Andrea López
-            </div>
-            <div style="font-size:13px;color:#7a8a8e">
-              Lima · San Isidro
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Reseña 5.1 -->
-      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
-        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
-          ★★★★★
-        </div>
-
-        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
-          Soy una persona en silla de ruedas, antes dependía de mi padre para poder limpiarme el trasero cada vez que hacía el dos. Ahora con el Lavapopo ya me atiendo sólo, no dependeo de otras personas, y además estoy más limpio. Es un golazo.
-        </p>
-
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
-            FS
-          </div>
-
-          <div>
-            <div style="font-weight:800;font-size:15px">
-              Felix Seminario
-            </div>
-            <div style="font-size:13px;color:#7a8a8e">
-              Cerro de Pasco
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Reseña 6 -->
-      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
-        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
-          ★★★★★
-        </div>
-
-        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
-          Mis hijos de 5 y 7 años aprendieron a usarlo en un día. Quedan más limpios que con papel y a mí me facilita un montón la rutina.
-        </p>
-
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
-            PC
-          </div>
-
-          <div>
-            <div style="font-weight:800;font-size:15px">
-              Patricia Castro
-            </div>
-            <div style="font-size:13px;color:#7a8a8e">
-              Lima · La Molina
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Reseña 7 -->
-      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
-        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
-          ★★★★★
-        </div>
-
-        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
-          Pensé que era una exageración hasta que lo probé. Ya no sé cómo vivía sin esto. Mi familia entera se convirtió en la primera semana.
-        </p>
-
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
-            JM
-          </div>
-
-          <div>
-            <div style="font-weight:800;font-size:15px">
-              José Mamani
-            </div>
-            <div style="font-size:13px;color:#7a8a8e">
-              Cusco
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <!-- Reseña 7.1 -->
-      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
-        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
-          ★★★★★
-        </div>
-
-        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
-          Mi esposa se acababa de operar y era muy dificil para ella el tema de ir al baño y encima tener que limpiarse cuando defecaba. El doctor me recomendó el Lavapopo y fué un alivio porque ya solo tenía que sentarse, girar la manilla de Lavapopo y  la limpieza se hacía sola a su gusto. Muy recomendado.
-        </p>
-
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
-            LS
-          </div>
-
-          <div>
-            <div style="font-weight:800;font-size:15px">
-              Luis Saenz
-            </div>
-            <div style="font-size:13px;color:#7a8a8e">
-              Lima · Ate
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Reseña 8 -->
-      <div style="background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(15,34,39,0.07);display:flex;flex-direction:column">
-        <div style="color:#f0a500;font-size:16px;letter-spacing:2px;margin-bottom:14px">
-          ★★★★★
-        </div>
-
-        <p style="font-size:15.5px;line-height:1.6;color:#28383c;margin:0 0 20px;flex:1">
-          Le dije a mi esposo que era una pérdida de plata. Me equivoqué. Ahora somos nosotros los que se lo recomendamos a todo el mundo.
-        </p>
-
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:42px;height:42px;border-radius:50%;background:#0BA9C2;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;flex:none">
-            RP
-          </div>
-
-          <div>
-            <div style="font-weight:800;font-size:15px">
-              Roxana Paredes
-            </div>
-            <div style="font-size:13px;color:#7a8a8e">
-              Lima · Los Olivos
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <div class="facts">
+      <div class="fact"><div class="fact-num">15 min</div><div class="fact-label">Instalación sin gasfitero</div></div>
+      <div class="fact"><div class="fact-num">0 W</div><div class="fact-label">Sin electricidad ni baterías</div></div>
+      <div class="fact"><div class="fact-num">S/ 700+</div><div class="fact-label">Ahorro estimado al año</div></div>
+      <div class="fact"><div class="fact-num">1 año</div><div class="fact-label">Garantía oficial</div></div>
     </div>
   </div>
 </section>
-  <!-- CALCULADORA -->
-  <section id="calculator" style="background:#0F2227;color:#fff;padding:96px 24px">
-    <div style="max-width:1200px;margin:0 auto">
-      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">05 · Calculadora</div>
-      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">¿Cuánto le pagas <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">al papel</em>?</h2>
-      <p style="font-size:17px;line-height:1.6;color:rgba(255,255,255,0.82);max-width:660px;margin:0 0 48px">Mueve los deslizadores. Descubre cuánto gastas hoy en papel higiénico, cuánto te recupera el Lavapopo y cuánto te roba el papel.&nbsp;</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:start">
-        <div style="display:flex;flex-direction:column;gap:34px">
 
-
-<div>
-  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px"><span style="font-weight:700;font-size:16px">Personas en casa</span><span id="peopleLabel" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;color:#0BA9C2">4 personas</span></div>
-  <input type="range" class="lp-range" id="peopleRange" min="1" max="10" step="1" value="4">
-</div>
-
-<div>
-  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px"><span style="font-weight:700;font-size:16px">Rollos por persona, por semana</span><span id="rollsLabel" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;color:#0BA9C2">1 rollo</span></div>
-  <input type="range" class="lp-range" id="rollsRange" min="0.5" max="4" step="0.5" value="1">
-</div>
-
-<div>
-  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px"><span style="font-weight:700;font-size:16px">Precio por rollo</span><span id="priceLabel" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;color:#0BA9C2">S/ 1.00</span></div>
-  <input type="range" class="lp-range" id="priceRange" min="0.5" max="4" step="0.05" value="1.00">
-  <div style="display:flex;justify-content:space-between;font-size:12.5px;color:rgba(255,255,255,0.5);margin-top:8px"><span>S/ 0.50</span><span>S/ 4.00</span></div>
-</div>
-         
-
-
- <p style="font-size:13px;color:rgba(255,255,255,0.55);margin:0">* Lavapopo reduce hasta el 90% del consumo de papel higiénico.</p>
-        </div>
-
-        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:24px;padding:34px">
-
-          
-
-<div style="margin-bottom:24px">
-  <div style="font-size:14px;color:rgba(255,255,255,0.7);margin-bottom:4px">Tu familia gasta hoy</div>
-  <div id="annualLabel" style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:46px;line-height:1;color:#fff">S/ 286</div>
-  <div style="font-size:14px;color:rgba(255,255,255,0.7);margin-top:4px">al año, en papel higiénico. Todos los años.</div>
-</div>
-
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px">
-  <div style="background:rgba(11,169,194,0.16);border-radius:16px;padding:18px">
-    <div style="font-size:13px;color:rgba(255,255,255,0.75)">Con Lavapopo ahorras</div>
-    <div id="ahorroLabel" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:26px;color:#0BA9C2;margin-top:4px">S/ 257</div>
-    <div style="font-size:12.5px;color:rgba(255,255,255,0.6)">cada año</div>
-  </div>
-
-  <div style="background:rgba(255,255,255,0.06);border-radius:16px;padding:18px">
-    <div style="font-size:13px;color:rgba(255,255,255,0.75)">En 10 años, el papel te robará</div>
-    <div id="tenYearLabel" style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:34px;color:#fff;margin-top:10px">S/ 2,857</div>
+<!-- ============ TRUST ============ -->
+<div class="trust">
+  <div class="wrap trust-inner" style="padding-left:24px;padding-right:24px">
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.4 3.3-5.5 6.5-5.5s5.9 2.1 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c1.9.7 3.2 2.5 3.5 5.2"/></svg>
+      <span><strong>+5,000</strong> hogares en el Perú</span>
+    </div>
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg>
+      <span><strong>4.9/5</strong> valoración de clientes</span>
+    </div>
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg>
+      <span><strong>Envíos</strong> a todo el Perú</span>
+    </div>
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h3"/></svg>
+      <span><strong>Pago</strong> contra entrega</span>
+    </div>
   </div>
 </div>
 
-          
-<div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20quiero%20comprar%20mi%20Lavapopo." 
-
- target="_blank"
-  rel="noopener noreferrer"
-
-style="text-decoration:none;background:#0BA9C2;color:#fff;font-weight:800;padding:14px 22px;border-radius:999px;flex:1;text-align:center;min-width:140px">Quiero el mío</a>
-            <a href="https://wa.me/51951540663?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Lavapopo." 
-
- target="_blank"
-  rel="noopener noreferrer"
-
-style="text-decoration:none;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);color:#fff;font-weight:700;padding:14px 22px;border-radius:999px;flex:1;text-align:center;min-width:140px">WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PLANETA -->
-  <section style="background:#0BA9C2;color:#fff;padding:96px 24px">
-    <div style="max-width:1200px;margin:0 auto">
-      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-bottom:14px">06 · Planeta</div>
-      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">Más higiene. <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0F2227">Menos huella</em>.</h2>
-      <p style="font-size:17px;line-height:1.6;color:rgba(255,255,255,0.92);max-width:660px;margin:0 0 48px">Cada Lavapopo evita cientos de rollos al año por familia. Es un cambio chico en casa y un cambio enorme para el planeta. Los árboles también te lo agradecen.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px">
-        <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:20px;padding:30px">
-          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:34px;line-height:1;margin-bottom:14px">240 rollos/año</div>
-          <p style="font-size:16px;line-height:1.55;margin:0 0 14px;color:rgba(255,255,255,0.95)">Lo que usa una familia peruana de 4. Con Lavapopo: casi nada.</p>
-          <div style="font-size:13px;color:rgba(255,255,255,0.7)">Familia promedio · 4 personas</div>
-        </div>
-        <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:20px;padding:30px">
-          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:34px;line-height:1;margin-bottom:14px">5 árboles</div>
-          <p style="font-size:16px;line-height:1.55;margin:0 0 14px;color:rgba(255,255,255,0.95)">Para producir el papel que tu familia usa en una década.</p>
-          <div style="font-size:13px;color:rgba(255,255,255,0.7)">Estimación · ciclo de vida del papel</div>
-        </div>
-        <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:20px;padding:30px">
-          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:34px;line-height:1;margin-bottom:14px">90% menos papel</div>
-          <p style="font-size:16px;line-height:1.55;margin:0 0 14px;color:rgba(255,255,255,0.95)">Reducción promedio del consumo de papel al instalar Lavapopo.</p>
-          <div style="font-size:13px;color:rgba(255,255,255,0.7)">Datos · usuarios Lavapopo Perú</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ESPECIFICACIONES -->
-  <section id="specs" style="background:#fff;padding:96px 24px">
-    <div style="max-width:1200px;margin:0 auto">
-      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">07 · Especificaciones</div>
-      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">Lo que vas a <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">recibir</em>.</h2>
-      <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:660px;margin:0 0 48px">Cada caja Lavapopo trae todo lo necesario para instalarlo y empezar a usarlo el mismo día. Sin sorpresas, sin "ah, faltaba esto", sin viaje a la ferretería un domingo a las 7 de la mañana.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:38px;align-items:center">
-        <div style="background:#FAF6EE;border-radius:22px;padding:24px;text-align:center"><img src="../assets/Contenido_Caja_Lavapopo.png" alt="Contenido de la caja Lavapopo" style="width:100%;height:auto;display:block;border-radius:12px"><div style="font-size:14px;color:#7a8a8e;margin-top:14px;font-weight:600">Todo incluido · listo para instalar</div></div>
-        <div>
-          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Modelo</span><span style="color:#4a5a5e;text-align:right">LP1284</span></div>
-          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Energía</span><span style="color:#4a5a5e;text-align:right">Sin electricidad</span></div>
-          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Material</span><span style="color:#4a5a5e;text-align:right">Plástico ABS · acero inox.</span></div>
-          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Boquilla</span><span style="color:#4a5a5e;text-align:right">Retráctil auto-limpiante</span></div>
-          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Control</span><span style="color:#4a5a5e;text-align:right">Perilla lateral</span></div>
-          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Conexión</span><span style="color:#4a5a5e;text-align:right">T 7/8" estándar</span></div>
-          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(15,34,39,0.08)"><span style="font-weight:700;color:#0F2227">Instalación</span><span style="color:#4a5a5e;text-align:right">≈ 15 min · sin gasfitero</span></div>
-          <div style="display:flex;justify-content:space-between;gap:18px;padding:15px 0"><span style="font-weight:700;color:#0F2227">Garantía</span><span style="color:#4a5a5e;text-align:right">1 año oficial</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-  <!-- FICHA TECNICA -->
-  <section id="tech" style="background:#FAF6EE;padding:96px 24px">
-    <div style="max-width:1200px;margin:0 auto">
-      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">08 · Ficha técnica</div>
-      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">Diseñado al <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">milímetro</em>.</h2>
-      <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:660px;margin:0 0 48px">Aquí los planos oficiales, vistas, partes, dimensiones reales en milímetros. Porque cuando un producto va entre tu trasero y el inodoro, es bueno saber qué hace cada milímetro.</p>
-     <div class="tech-grid" style="display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:22px;margin-bottom:34px;justify-content:center">
-        <div class="tech-card" style="background: #fff; border-radius: 18px; padding: 22px; border: 1px solid rgba(15,34,39,0.06); width:100%"><div role="img" aria-label="01 · Superior — 215 mm de ancho · 135 mm entre placas ajustables." style="height:230px;background-image:url('../assets/Superior Lineal.JPG');background-size:contain;background-repeat:no-repeat;background-position:center"></div><p style="font-size:13.5px;line-height:1.5;color:#4a5a5e;margin:14px 0 0">01 · Superior — 215 mm de ancho · 135 mm entre placas ajustables.</p></div>
-        <div class="tech-card" style="background: #fff; border-radius: 18px; padding: 22px; border: 1px solid rgba(15,34,39,0.06); width:100%"><div role="img" aria-label="02 · Isométrica — Placas ajustables, perilla, boquillas frontal y trasera." style="height:230px;background-image:url('../assets/Isometrico Lineal.JPG');background-size:contain;background-repeat:no-repeat;background-position:center"></div><p style="font-size:13.5px;line-height:1.5;color:#4a5a5e;margin:14px 0 0">02 · Isométrica — Placas ajustables, perilla, boquillas frontal y trasera.</p></div>
-        <div class="tech-card" style="background: #fff; border-radius: 18px; padding: 22px; border: 1px solid rgba(15,34,39,0.06); width:100%"><div role="img" aria-label="03 · Frontal — 365 mm de largo · 75 mm de alto · boquilla de 6 mm." style="height:230px;background-image:url('../assets/Frontal Lineal.JPG');background-size:contain;background-repeat:no-repeat;background-position:center"></div><p style="font-size:13.5px;line-height:1.5;color:#4a5a5e;margin:14px 0 0">03 · Frontal — 365 mm de largo · 75 mm de alto · boquilla de 6 mm.</p></div>
-        <div class="tech-card" style="background: #fff; border-radius: 18px; padding: 22px; border: 1px solid rgba(15,34,39,0.06); width:100%"><div role="img" aria-label="04 · Perfil — Conexión G 1/2 pulgada estándar · entrada de agua fría." style="height:230px;background-image:url('../assets/Perfil Lineal.JPG');background-size:contain;background-repeat:no-repeat;background-position:center"></div><p style="font-size:13.5px;line-height:1.5;color:#4a5a5e;margin:14px 0 0">04 · Perfil — Conexión G 1/2" estándar · entrada de agua fría.</p></div>
-        <div class="tech-card" style="background: #fff; border-radius: 18px; padding: 22px; border: 1px solid rgba(15,34,39,0.06); width:100%"><div role="img" aria-label="05 · Lavapopo instalado y funcionando." style="height:230px;background-image:url('../assets/Lavapopo instalado.jpg');background-size:contain;background-repeat:no-repeat;background-position:center"></div><p style="font-size:13.5px;line-height:1.5;color:#4a5a5e;margin:14px 0 0">05 · Lavapopo instalado y funcionando.</p></div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
-        <div style="background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(15,34,39,0.06)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#0BA9C2">365mm</div><div style="font-size:13px;color:#7a8a8e;margin-top:4px">Largo</div></div>
-        <div style="background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(15,34,39,0.06)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#0BA9C2">215mm</div><div style="font-size:13px;color:#7a8a8e;margin-top:4px">Ancho</div></div>
-        <div style="background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(15,34,39,0.06)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#0BA9C2">75mm</div><div style="font-size:13px;color:#7a8a8e;margin-top:4px">Alto</div></div>
-        <div style="background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(15,34,39,0.06)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#0BA9C2">6mm</div><div style="font-size:13px;color:#7a8a8e;margin-top:4px">Boquilla</div></div>
-        <div style="background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(15,34,39,0.06)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#0BA9C2">G 1/2"</div><div style="font-size:13px;color:#7a8a8e;margin-top:4px">Conexión</div></div>
-        <div style="background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(15,34,39,0.06)"><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#0BA9C2">135mm</div><div style="font-size:13px;color:#7a8a8e;margin-top:4px">Placas</div></div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-  <!-- FAQ -->
-  <section id="faq" style="background:#fff;padding:96px 24px">
-    <div style="max-width:860px;margin:0 auto">
-      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">09 · Preguntas frecuentes</div>
-      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 40px;letter-spacing:-0.02em">Las dudas que <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">no te animaste</em> a preguntar.</h2>
-      <div style="display:flex;flex-direction:column;gap:12px" id="faqContainer"></div>
-    </div>
-  </section>
-
-  <!-- PRECIOS -->
-  <section id="pricing" style="background:#FAF6EE;padding:96px 24px">
-    <div style="max-width:1200px;margin:0 auto">
-      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">10 · Precios</div>
-      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">Un precio, <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">sin sorpresas</em>.</h2>
-      <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:680px;margin:0 0 48px">Pago contra entrega o transferencia. Envíos a todo Perú con Shalom, Marvisur Courier. Escríbenos al WhatsApp <strong>951 540 663</strong> para coordinar el tuyo. Tu trasero ya esperó suficiente.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;align-items:start">
-        <div style="background:#fff;border-radius:22px;padding:32px;border:2px solid rgba(15,34,39,0.10);position:relative;display:flex;flex-direction:column;height:100%">
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;margin:0 0 6px">Individual</h3>
-          <p style="font-size:14.5px;color:#7a8a8e;margin:0 0 18px;min-height:40px">1 unidad · para tu baño principal.</p>
-          <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:16px"><span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:38px;color:#0F2227">S/ 140</span><span style="font-size:15px;color:#7a8a8e">/unidad</span></div>
-          <p style="font-size:14.5px;line-height:1.55;color:#4a5a5e;margin:0 0 20px">En 10 años ahorras S/ 2,500 en papel. Lavapopo cuesta S/ 140. Pequeño detalle.</p>
-          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;flex:1">
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Lavapopo Clásico</div>
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Adaptador T 7/8" + manguera</div>
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Manual de instalación</div>
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Garantía 1 año</div>
-          </div>
-          <a href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20quiero%20el%20plan%20Individual%20%28S%2F%20140%29." 
- target="_blank"
-  rel="noopener noreferrer"
-
-style="text-decoration:none;background:#0BA9C2;color:#fff;font-weight:800;text-align:center;padding:15px;border-radius:999px;font-size:15.5px">Lo quiero</a>
-        </div>
-        <div style="background:#fff;border-radius:22px;padding:32px;border:2px solid #0BA9C2;position:relative;display:flex;flex-direction:column;height:100%">
-          <div style="position:absolute;top:-13px;left:32px;background:#0BA9C2;color:#fff;font-weight:800;font-size:12.5px;padding:6px 14px;border-radius:999px">Más vendido</div>
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;margin:0 0 6px">Familia</h3>
-          <p style="font-size:14.5px;color:#7a8a8e;margin:0 0 18px;min-height:40px">2 unidades · para casas con más de un baño.</p>
-          <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:16px"><span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:38px;color:#0F2227">S/ 249</span><span style="font-size:15px;color:#7a8a8e">/pack</span></div>
-          <p style="font-size:14.5px;line-height:1.55;color:#4a5a5e;margin:0 0 20px">Dos baños limpios. S/ 5,000 ahorrados en 10 años. Y dos traseros felices.</p>
-          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;flex:1">
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>2 × Lavapopo Clásico</div>
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>2 sets de instalación</div>
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Garantía 1 año</div>
-          </div>
-          <a href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20quiero%20el%20pack%20Familia."
-
- target="_blank"
-  rel="noopener noreferrer"
-
- style="text-decoration:none;background:#0BA9C2;color:#fff;font-weight:800;text-align:center;padding:15px;border-radius:999px;font-size:15.5px">Quiero el pack</a>
-        </div>
-        <div style="background:#fff;border-radius:22px;padding:32px;border:2px solid rgba(15,34,39,0.10);position:relative;display:flex;flex-direction:column;height:100%">
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;margin:0 0 6px">Edificio / Hotel</h3>
-          <p style="font-size:14.5px;color:#7a8a8e;margin:0 0 18px;min-height:40px">10+ unidades con descuento por volumen.</p>
-          <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:16px"><span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:38px;color:#0F2227">A medida</span></div>
-          <p style="font-size:14.5px;line-height:1.55;color:#4a5a5e;margin:0 0 20px">Si tu negocio quiere ser un destino premium, los huéspedes lo van a notar. Y a recomendar.</p>
-          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;flex:1">
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Cotización personalizada</div>
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Asesoría de instalación</div>
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Facturación con RUC</div>
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#28383c"><span style="color:#0BA9C2;font-weight:800;flex:none">✓</span>Garantía extendida</div>
-          </div>
-          <a href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20edificio%20u%20hotel." 
-
- target="_blank"
-  rel="noopener noreferrer"
-
-style="text-decoration:none;background:#0BA9C2;color:#fff;font-weight:800;text-align:center;padding:15px;border-radius:999px;font-size:15.5px">Cotizar</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
- <!-- =========================================================
-     INICIO SECCIÓN CONTACTO
-========================================================= -->
-<section id="contact" style="background:#fff;padding:96px 24px">
-
-  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px">
-
-    <!-- COLUMNA IZQUIERDA: TEXTO Y BOTONES -->
+<!-- ============ INSTALACIÓN ============ -->
+<section class="section" id="manualdeinstalacion">
+  <div class="wrap video-grid">
     <div>
-
-      <div style="font-family:'Mulish',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#0BA9C2;margin-bottom:14px">
-        11 · Contacto
-      </div>
-
-      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 18px;letter-spacing:-0.02em">
-        Hablemos. Tu trasero
-        <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#0BA9C2">
-          lo vale
-        </em>.
-      </h2>
-
-      <p style="font-size:17px;line-height:1.6;color:#4a5a5e;max-width:520px;margin:0 0 30px">
-        Cuéntanos sobre tu baño, te confirmamos compatibilidad, tiempos de envío y el método de pago que prefieras.
-        Atendemos lunes a sábado, 9 am a 7 pm.
-      </p>
-
-      <!-- BOTONES DE CONTACTO -->
-      <div style="display:flex;flex-direction:column;gap:14px">
-
-        <!-- BOTÓN WHATSAPP -->
-        <a 
-          href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20me%20interesa%20el%20Lavapopo."
-
-
- target="_blank"
-  rel="noopener noreferrer"
-          style="text-decoration:none;display:flex;align-items:center;gap:14px;background:#FAF6EE;border-radius:16px;padding:18px 20px;border:1px solid rgba(15,34,39,0.06)"
-        >
-          <div style="width:44px;height:44px;border-radius:12px;background:#0BA9C2;flex:none"></div>
-
-          <div>
-            <div style="font-weight:800;color:#0F2227">
-              WhatsApp · respuesta rápida
-            </div>
-
-            <div style="color:#4a5a5e;font-size:14px">
-              951 540 663
-            </div>
-          </div>
-        </a>
-        <!-- FIN BOTÓN WHATSAPP -->
-
-        <!-- BOTÓN ATENCIÓN POR CHAT -->
-        <a 
-          href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20me%20interesa%20saber%20m%C3%A1s."
-
- target="_blank"
-  rel="noopener noreferrer"
-
-          style="text-decoration:none;display:flex;align-items:center;gap:14px;background:#FAF6EE;border-radius:16px;padding:18px 20px;border:1px solid rgba(15,34,39,0.06)"
-        >
-          <div style="width:44px;height:44px;border-radius:12px;background:#0F2227;flex:none"></div>
-
-          <div>
-            <div style="font-weight:800;color:#0F2227">
-              Atención por chat
-            </div>
-
-            <div style="color:#4a5a5e;font-size:14px">
-              Lun–Sáb · 9am a 7pm
-            </div>
-          </div>
-        </a>
-        <!-- FIN BOTÓN ATENCIÓN POR CHAT -->
-
-      </div>
-      <!-- FIN BOTONES DE CONTACTO -->
-
+      <p class="eyebrow">Instalación · Video de 1:20</p>
+      <h2>Lo instalas tú mismo, <span class="serif">en 15 minutos.</span></h2>
+      <p class="lead">El video muestra la instalación paso a paso. Se conecta a la entrada de agua del tanque, sin romper paredes ni modificar el inodoro.</p>
+      <ul class="checklist">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Solo necesitas una llave inglesa y un desarmador.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sin perforaciones: la instalación es reversible.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>La caja incluye todas las piezas y un manual impreso.</span></li>
+      </ul>
     </div>
-    <!-- FIN COLUMNA IZQUIERDA -->
-
-
-    <!-- COLUMNA DERECHA: FORMULARIO -->
-    <div style="background:#FAF6EE;border-radius:24px;padding:34px;border:1px solid rgba(15,34,39,0.06)">
-
-      <!-- CAMPOS DEL FORMULARIO -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
-
-        <!-- CAMPO NOMBRE -->
-        <div>
-          <label style="font-size:13px;font-weight:700;color:#4a5a5e;display:block;margin-		bottom:7px">
-            Nombre
-          </label>
-
-
-	<input 
-	  id="clienteInput"
-	  type="text"
-	  style="width:100%;padding:13px 15px;border-radius:12px;border:1px solid 	rgba(15,34,39,0.14);font-family:inherit;font-size:15px;background:#fff"
-	>
-        </div>
-        <!-- FIN CAMPO NOMBRE -->
-
-
-        <!-- CAMPO TELÉFONO -->
-        <div>
-          <label style="font-size:13px;font-weight:700;color:#4a5a5e;display:block;margin-bottom:7px">
-            Teléfono
-          </label>
-
-
-<input 
-  id="telefonoInput"
-  type="tel"
-  style="width:100%;padding:13px 15px;border-radius:12px;border:1px solid rgba(15,34,39,0.14);font-family:inherit;font-size:15px;background:#fff"
->
-        </div>
-        <!-- FIN CAMPO TELÉFONO -->
-
-
-        <!-- CAMPO .... -->
-<div>
-  <label style="font-size:13px;font-weight:700;color:#4a5a5e;display:block;margin-bottom:7px">
-    Departamento
-  </label>
-
-  <select
-    id="departamentoSelect"
-    style="width:100%;padding:13px 15px;border-radius:12px;border:1px solid rgba(15,34,39,0.14);font-family:inherit;font-size:15px;background:#fff"
-  >
-    <option value="">Selecciona tu departamento</option>
-  </select>
-</div>
-
-<div>
-  <label style="font-size:13px;font-weight:700;color:#4a5a5e;display:block;margin-bottom:7px">
-    Localidad
-  </label>
-
-<input
-  id="ciudadInput"
-  type="text"
-  placeholder="Escribe tu localidad o distrito"
-  style="width:100%;padding:13px 15px;border-radius:12px;border:1px solid rgba(15,34,39,0.14);font-family:inherit;font-size:15px;background:#fff"
->
-</div>
-        <!-- FIN CAMPO .... -->
-
-
-
-
-
+    <div class="video-frame">
+      <div class="video-box" id="manualVideoContainer">
+        <iframe id="manualVideo" src="" title="Manual de instalación de Lavapopo" loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <!-- FIN CAMPOS DEL FORMULARIO -->
-
-
-      <!-- CAMPO CUÉNTANOS -->
-      <div style="margin-bottom:18px">
-        <label style="font-size:13px;font-weight:700;color:#4a5a5e;display:block;margin-bottom:7px">
-          Cuéntanos
-        </label>
-
-<textarea
-  id="cuentanosInput"
-  style="width:100%;min-height:110px;padding:13px 15px;border-radius:12px;border:1px solid rgba(15,34,39,0.14);font-family:inherit;font-size:15px;background:#fff;resize:vertical"
-></textarea>
-
-      </div>
-      <!-- FIN CAMPO CUÉNTANOS -->
-
-
-      <!-- BOTÓN FINAL -->
-<a 
-  href="#"
-  id="whatsappFormularioBtn"
- target="_blank"
-  rel="noopener noreferrer"
-  style="text-decoration:none;display:block;text-align:center;background:#0BA9C2;color:#fff;font-weight:800;padding:15px;border-radius:999px;font-size:16px"
->
-  Quiero Lavapopo
-</a>
-      <!-- FIN BOTÓN FINAL -->
-
     </div>
-    <!-- FIN COLUMNA DERECHA -->
-
   </div>
-
 </section>
-<!-- =========================================================
-     FIN SECCIÓN CONTACTO
-========================================================= -->
 
-
-
-
-  <!-- FOOTER -->
-  <footer style="background:#0F2227;color:#fff;padding:72px 24px 40px">
-    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px">
-      <div style="grid-column:span 1;min-width:240px">
-        <img src="../assets/logo-blanco.png" alt="Lavapopo" style="height:88px;width:auto;display:block;margin-bottom:18px">
-        <div style="font-weight:700;font-size:15px;margin-bottom:10px;color:rgba(255,255,255,0.92)">Para poperos exigentes.</div>
-        <p style="font-size:14.5px;line-height:1.6;color:rgba(255,255,255,0.6);margin:0;max-width:300px">Accesorio para inodoro, sin electricidad. Instalación en 15 minutos. Hecho para hogares peruanos que merecen un mejor desenlace.</p>
+<!-- ============ CÓMO SE USA ============ -->
+<section class="section aqua" id="how">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Cómo se usa</p>
+      <h2>Cuatro pasos, <span class="serif">sin complicaciones.</span></h2>
+      <p class="lead">Lavapopo queda debajo del asiento y no se nota hasta que lo necesitas. Al terminar, una perilla controla el agua y las manos quedan libres.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Usa el inodoro como siempre</h3>
+        <p>El dispositivo no ocupa espacio ni cambia la forma en que te sientas.</p>
       </div>
-      <div>
-        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;margin:0 0 16px">Producto</h4>
-        <div style="display:flex;flex-direction:column;gap:11px">
-          <a href="#how" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">Cómo funciona</a>
-          <a href="#features" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">Beneficios</a>
-          <a href="#specs" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">Especificaciones</a>
-          <a href="#tech" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">Ficha técnica</a>
-          <a href="#compat" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">Compatibilidad</a>
-          <a href="#pricing" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">Precios</a>
-        </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Abre la perilla</h3>
+        <p>Gírala poco a poco para aumentar el caudal. El chorro se dirige a la zona que necesita limpieza.</p>
       </div>
-      <div>
-        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;margin:0 0 16px">Atención</h4>
-        <div style="display:flex;flex-direction:column;gap:11px">
-          <a href="https://wa.me/51951540663" 
-
- target="_blank"
-  rel="noopener noreferrer"
-
-style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">WhatsApp 951 540 663</a>
-          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Lun a Sáb · 8 am – 8 pm</span>
-          <a href="#faq" style="text-decoration:none;color:rgba(255,255,255,0.65);font-size:14.5px">FAQ</a>
-        </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Ajusta tu posición</h3>
+        <p>Si hace falta, muévete ligeramente sin levantarte para que el agua llegue a toda la zona.</p>
       </div>
-      <div>
-        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;margin:0 0 16px">Envíos</h4>
-        <div style="display:flex;flex-direction:column;gap:11px">
-          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Envíos a todo Perú</span>
-          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Pago contra entrega</span>
-          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Transferencia bancaria</span>
-          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Shalom</span>
-          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Marvisur</span>
-          <span style="color:rgba(255,255,255,0.65);font-size:14.5px">Yape</span>
-
-        </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Cierra y sécate</h3>
+        <p>Cierra la perilla y usa un solo trozo de papel para secar el agua restante.</p>
       </div>
     </div>
-    <div style="max-width:1200px;margin:48px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.12);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13.5px;color:rgba(255,255,255,0.5)">
-      <span>© 2026 Lavapopo · Para poperos exigentes 💩</span>
-      <span>Lima, Perú · El papel no limpia. El agua sí.</span>
+  </div>
+</section>
+
+<!-- ============ BENEFICIOS ============ -->
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Beneficios</p>
+      <h2>Diseñado para una higiene <span class="serif">simple y cuidada.</span></h2>
+      <p class="lead">Sin enchufes, baterías ni productos químicos. Solo agua de la red, una perilla y un mecanismo que no requiere mantenimiento especial.</p>
     </div>
-  </footer>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2.5L5 13.5h6l-1 8 8-11h-6z"/><path d="M3 3l18 18"/></svg></div>
+        <h3>Sin electricidad ni baterías</h3>
+        <p>Funciona con la presión de agua que ya tienes en casa. Si tu inodoro carga, Lavapopo funciona.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 7.2 6 10.5a6 6 0 0 1-12 0C6 10.2 9 7 12 3z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
+        <h3>Boquilla autolimpiante</h3>
+        <p>Antes y después de cada uso, el agua enjuaga la boquilla. Es retráctil y queda protegida cuando no se usa.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 12l4-3"/><path d="M12 4v2M20 12h-2M4 12h2"/></svg></div>
+        <h3>Presión regulable</h3>
+        <p>Una sola perilla controla la intensidad: suave para niños y adultos mayores, más firme si lo prefieres.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0-5.3 5.3L3.5 17.5l3 3 5.7-5.7a4 4 0 0 0 5.3-5.3l-2.4 2.4-2.6-.4-.4-2.6z"/></svg></div>
+        <h3>Instalación sin gasfitero</h3>
+        <p>Llave inglesa, desarmador y unos 15 minutos. Si lo retiras, el inodoro queda exactamente como estaba.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/></svg></div>
+        <h3>Menos papel, sin químicos</h3>
+        <p>El agua hace la limpieza; el papel solo sirve para secar. Reduce hasta el 90% del consumo de papel higiénico.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></div>
+        <h3>La experiencia de un hotel, en casa</h3>
+        <p>La higiene con agua es habitual en hoteles y hogares de muchos países. Ahora, a un precio accesible.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-</div>
+<!-- ============ COMPATIBILIDAD ============ -->
+<section class="section aqua" id="compat">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Compatibilidad</p>
+      <h2>¿Funciona con <span class="serif">tu inodoro?</span></h2>
+      <p class="lead">Lavapopo es compatible con los inodoros más comunes en el Perú: aquellos en los que el asiento y el tanque forman un ángulo de 90°.</p>
+    </div>
+    <div class="compat">
+      <div class="compat-card">
+        <img src="../assets/toilet-1.png" alt="Inodoro one-piece de forma redondeada" loading="lazy" width="600" height="600">
+        <span class="tag ok">Compatible</span>
+        <h3>One-piece clásico</h3>
+        <p>Asiento y tanque forman un ángulo de 90°.</p>
+      </div>
+      <div class="compat-card">
+        <img src="../assets/toilet-2.png" alt="Inodoro de dos piezas" loading="lazy" width="600" height="600">
+        <span class="tag ok">Compatible</span>
+        <h3>Dos piezas</h3>
+        <p>Asiento y tanque forman un ángulo de 90°.</p>
+      </div>
+      <div class="compat-card">
+        <img src="../assets/toilet-3.png" alt="Inodoro one-piece de líneas rectas" loading="lazy" width="600" height="600">
+        <span class="tag ok">Compatible</span>
+        <h3>One-piece recto</h3>
+        <p>Asiento y tanque forman un ángulo de 90°.</p>
+      </div>
+      <div class="compat-card is-no">
+        <img src="../assets/toilet-4.png" alt="Inodoro one-piece de forma curvada" loading="lazy" width="600" height="600">
+        <span class="tag no">No compatible</span>
+        <h3>One-piece curvado</h3>
+        <p>Asiento y tanque no forman un ángulo de 90°, lo que impide la instalación.</p>
+      </div>
+    </div>
+    <div class="note">
+      <p><strong>¿No estás seguro?</strong> Envíanos una foto de tu inodoro por WhatsApp y te confirmamos la compatibilidad.</p>
+      <a class="btn btn-primary" href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20quiero%20saber%20si%20mi%20inodoro%20es%20compatible." target="_blank" rel="noopener">Enviar foto · 951 540 663</a>
+    </div>
+  </div>
+</section>
 
+<!-- ============ OPINIONES ============ -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Opiniones de clientes</p>
+      <h2>Familias en todo el Perú <span class="serif">ya lo usan.</span></h2>
+      <div class="rating-row">
+        <span class="score">4.9</span>
+        <span class="meta"><span class="stars" aria-hidden="true">★★★★★</span><br>Valoración promedio de más de 5,000 clientes</span>
+      </div>
+    </div>
+    <div class="reviews">
+      <figure class="review">
+        <span class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</span>
+        <blockquote>“Lo instalé en menos de 20 minutos sin llamar al gasfitero. En casa ya nadie quiere un baño sin Lavapopo.”</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">CM</span><span><span class="who">Carla Mendoza</span><br><span class="where">Lima · Surco</span></span></figcaption>
+      </figure>
+      <figure class="review">
+        <span class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</span>
+        <blockquote>“Lo vi en Japón durante un viaje y siempre quise uno. Lavapopo me dio lo mismo sin gastar miles de soles ni hacer obras en el baño.”</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">RT</span><span><span class="who">Rodrigo Tapia</span><br><span class="where">Arequipa</span></span></figcaption>
+      </figure>
+      <figure class="review">
+        <span class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</span>
+        <blockquote>“Tengo Lavapopo hace dos años. Cuando viajo y me quedo en un hotel, lo extraño: limpiarse solo con papel ya no se siente igual.”</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">AL</span><span><span class="who">Andrea López</span><br><span class="where">Lima · San Isidro</span></span></figcaption>
+      </figure>
+      <figure class="review">
+        <span class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</span>
+        <blockquote>“Mis hijos de 5 y 7 años aprendieron a usarlo en un día. Quedan más limpios que con papel y la rutina es mucho más sencilla.”</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">PC</span><span><span class="who">Patricia Castro</span><br><span class="where">Lima · La Molina</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULADORA ============ -->
+<div class="wave" style="background:#FFFFFF" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C240,72 480,8 720,30 C960,52 1200,10 1440,34 L1440,70 L0,70 Z" fill="#0B6F96"/><path d="M0,52 C260,30 520,70 760,48 C1000,26 1220,62 1440,46 L1440,70 L0,70 Z" fill="#0B6F96" opacity="0.5"/></svg></div>
+<section class="section dark" id="calculator">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Calculadora de ahorro</p>
+      <h2>¿Cuánto gastas hoy <span class="serif">en papel higiénico?</span></h2>
+      <p class="lead">Ajusta los valores según tu hogar y compara el gasto anual con lo que ahorrarías con Lavapopo.</p>
+    </div>
+    <div class="calc">
+      <div>
+        <div class="calc-field">
+          <label for="peopleRange">Personas en casa <output id="peopleLabel" for="peopleRange">4 personas</output></label>
+          <input type="range" class="range" id="peopleRange" min="1" max="10" step="1" value="4">
+          <div class="range-ends" aria-hidden="true"><span>1</span><span>10</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="rollsRange">Rollos por persona, por semana <output id="rollsLabel" for="rollsRange">1 rollo</output></label>
+          <input type="range" class="range" id="rollsRange" min="0.5" max="4" step="0.5" value="1">
+          <div class="range-ends" aria-hidden="true"><span>0.5</span><span>4</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="priceRange">Precio por rollo <output id="priceLabel" for="priceRange">S/ 1.00</output></label>
+          <input type="range" class="range" id="priceRange" min="0.5" max="4" step="0.05" value="1.00">
+          <div class="range-ends" aria-hidden="true"><span>S/ 0.50</span><span>S/ 4.00</span></div>
+        </div>
+        <p class="calc-note">* Cálculo referencial. Lavapopo reduce hasta el 90% del consumo de papel higiénico.</p>
+      </div>
+      <div class="calc-results" aria-live="polite">
+        <div class="calc-row">
+          <div class="calc-label">Tu hogar gasta hoy, al año</div>
+          <div class="calc-value" id="annualLabel">S/ 208</div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-label">Con Lavapopo ahorras, cada año</div>
+          <div class="calc-value accent" id="ahorroLabel">S/ 187</div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-label">Gasto en papel en 10 años</div>
+          <div class="calc-value" id="tenYearLabel">S/ 2,080</div>
+        </div>
+        <a class="btn btn-light" href="#pricing">Comprar Lavapopo · S/ 140</a>
+      </div>
+    </div>
+
+    <div class="eco">
+      <div><strong>240 rollos al año</strong><span>Consumo típico de una familia peruana de 4 personas. Con Lavapopo, casi nada.</span><small>FAMILIA PROMEDIO · 4 PERSONAS</small></div>
+      <div><strong>5 árboles</strong><span>Necesarios para producir el papel que una familia usa en una década.</span><small>ESTIMACIÓN · CICLO DE VIDA DEL PAPEL</small></div>
+      <div><strong>90% menos papel</strong><span>Reducción promedio del consumo al instalar Lavapopo.</span><small>DATOS · USUARIOS LAVAPOPO PERÚ</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESPECIFICACIONES ============ -->
+<section class="section" id="specs">
+  <div class="wrap specs-grid">
+    <div class="specs-figure">
+      <img src="../assets/Contenido_Caja_Lavapopo.png" alt="Contenido de la caja: Lavapopo, adaptador T, manguera flexible, cinta selladora, empaque y manual de instalación" loading="lazy" width="1200" height="1024">
+    </div>
+    <div>
+      <p class="eyebrow">Especificaciones</p>
+      <h2>Todo lo necesario, <span class="serif">en una caja.</span></h2>
+      <p class="lead">Cada caja incluye las piezas para instalarlo y usarlo el mismo día, sin compras adicionales.</p>
+      <table class="spec-table">
+        <tbody>
+          <tr><th scope="row">Modelo</th><td>LP1284</td></tr>
+          <tr><th scope="row">Energía</th><td>Sin electricidad</td></tr>
+          <tr><th scope="row">Material</th><td>Plástico ABS y acero inoxidable</td></tr>
+          <tr><th scope="row">Boquilla</th><td>Retráctil y autolimpiante</td></tr>
+          <tr><th scope="row">Control</th><td>Perilla lateral</td></tr>
+          <tr><th scope="row">Conexión</th><td>Adaptador T 7/8" estándar</td></tr>
+          <tr><th scope="row">Instalación</th><td>≈ 15 minutos, sin gasfitero</td></tr>
+          <tr><th scope="row">Garantía</th><td>1 año oficial</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FICHA TÉCNICA ============ -->
+<section class="section aqua" id="tech">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Ficha técnica</p>
+      <h2>Diseñado <span class="serif">al milímetro.</span></h2>
+      <p class="lead">Planos y vistas del producto con sus dimensiones reales.</p>
+    </div>
+    <div class="tech">
+      <figure>
+        <img src="../assets/Superior%20Lineal.JPG" alt="Plano de la vista superior de Lavapopo con cotas" loading="lazy" width="1200" height="750">
+        <figcaption><strong>Vista superior.</strong> 215 mm de ancho · 135 mm entre placas ajustables.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/Isometrico%20Lineal.JPG" alt="Vista isométrica de Lavapopo" loading="lazy" width="1200" height="750">
+        <figcaption><strong>Vista isométrica.</strong> Placas ajustables, perilla y boquillas frontal y posterior.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/Frontal%20Lineal.JPG" alt="Plano de la vista frontal de Lavapopo con cotas" loading="lazy" width="1200" height="750">
+        <figcaption><strong>Vista frontal.</strong> 365 mm de largo · 75 mm de alto · boquilla de 6 mm.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/Perfil%20Lineal.JPG" alt="Plano de la vista de perfil de Lavapopo" loading="lazy" width="1200" height="750">
+        <figcaption><strong>Vista de perfil.</strong> Conexión G 1/2" estándar · entrada de agua fría.</figcaption>
+      </figure>
+      <figure class="wide">
+        <img src="../assets/Lavapopo%20instalado.jpg" alt="Dibujo de Lavapopo instalado en un inodoro de dos piezas" loading="lazy" width="1220" height="1289">
+        <figcaption>
+          <strong>Lavapopo instalado.</strong>
+          <div class="dims">
+            <div><b>365 mm</b><span>Largo</span></div>
+            <div><b>215 mm</b><span>Ancho</span></div>
+            <div><b>75 mm</b><span>Alto</span></div>
+            <div><b>6 mm</b><span>Boquilla</span></div>
+            <div><b>G 1/2"</b><span>Conexión</span></div>
+            <div><b>135 mm</b><span>Entre placas</span></div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="wrap faq-grid">
+    <div class="head" style="margin-bottom:0">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Resolvemos <span class="serif">tus dudas.</span></h2>
+      <p class="lead">Si tu pregunta no está aquí, escríbenos por WhatsApp y te respondemos.</p>
+      <div style="margin-top:28px"><a class="btn btn-ghost" href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20me%20interesa%20saber%20m%C3%A1s." target="_blank" rel="noopener">Hacer una consulta</a></div>
+    </div>
+    <div class="faq-list" id="faqContainer"></div>
+  </div>
+</section>
+
+<!-- ============ PRECIOS ============ -->
+<section class="section aqua2" id="pricing">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">Precios</p>
+      <h2>Un precio claro, <span class="serif">sin sorpresas.</span></h2>
+      <p class="lead">Pago contra entrega o transferencia. Envíos a todo el Perú. Coordinamos tu pedido por WhatsApp al 951 540 663.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <h3>Individual</h3>
+        <p class="plan-sub">1 unidad · para tu baño principal.</p>
+        <div class="price"><b>S/ 140</b><span>por unidad</span></div>
+        <p class="plan-copy">En 10 años ahorras S/ 2,500 en papel.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Lavapopo Clásico</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Adaptador T 7/8" y manguera</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Manual de instalación</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Garantía de 1 año</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20quiero%20el%20plan%20Individual%20%28S%2F%20140%29." target="_blank" rel="noopener">Comprar Individual</a>
+      </div>
+      <div class="plan featured">
+        <span class="badge">MÁS VENDIDO</span>
+        <h3>Familia</h3>
+        <p class="plan-sub">2 unidades · para casas con más de un baño.</p>
+        <div class="price"><b>S/ 249</b><span>por pack</span></div>
+        <p class="plan-copy">Dos baños equipados. S/ 5,000 de ahorro en 10 años.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>2 × Lavapopo Clásico</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>2 sets de instalación</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Garantía de 1 año</li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20quiero%20el%20pack%20Familia." target="_blank" rel="noopener">Comprar pack Familia</a>
+      </div>
+      <div class="plan">
+        <h3>Edificio / Hotel</h3>
+        <p class="plan-sub">10+ unidades con descuento por volumen.</p>
+        <div class="price"><b>A medida</b></div>
+        <p class="plan-copy">Para proyectos residenciales, hoteles y empresas.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Cotización personalizada</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Asesoría de instalación</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Facturación con RUC</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Garantía extendida</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20edificio%20u%20hotel." target="_blank" rel="noopener">Solicitar cotización</a>
+      </div>
+    </div>
+    <div class="pay">
+      <span>Pago contra entrega</span>
+      <span>Transferencia bancaria</span>
+      <span>Yape</span>
+      <span>Envíos con Shalom y Marvisur</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">Contacto</p>
+      <h2>Conversemos sobre <span class="serif">tu baño.</span></h2>
+      <p class="lead">Te confirmamos la compatibilidad, los tiempos de envío y el método de pago que prefieras.</p>
+      <ul class="contact-list">
+        <li><span class="k">WhatsApp</span><a class="v" href="https://wa.me/51951540663?text=Hola%20Lavapopo%2C%20me%20interesa%20el%20Lavapopo." target="_blank" rel="noopener">951 540 663</a></li>
+        <li><span class="k">Horario de atención</span><span class="v">Lunes a sábado, 9 am a 7 pm</span></li>
+        <li><span class="k">Envíos</span><span class="v">A todo el Perú</span></li>
+      </ul>
+    </div>
+    <form class="form" id="contactForm" novalidate>
+      <div class="form-row">
+        <div><label for="clienteInput">Nombre</label><input id="clienteInput" type="text" autocomplete="name"></div>
+        <div><label for="telefonoInput">Teléfono</label><input id="telefonoInput" type="tel" autocomplete="tel" inputmode="tel"></div>
+      </div>
+      <div class="form-row">
+        <div><label for="departamentoSelect">Departamento</label>
+          <select id="departamentoSelect"><option value="">Selecciona</option></select></div>
+        <div><label for="ciudadInput">Localidad</label><input id="ciudadInput" type="text" autocomplete="address-level2"></div>
+      </div>
+      <div><label for="cuentanosInput">Tu consulta</label><textarea id="cuentanosInput" placeholder="Cuéntanos qué necesitas"></textarea></div>
+      <button class="btn btn-primary" type="submit" id="whatsappFormularioBtn">Enviar por WhatsApp</button>
+      <p class="form-hint">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<div class="wave" style="background:#FFFFFF" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C240,72 480,8 720,30 C960,52 1200,10 1440,34 L1440,70 L0,70 Z" fill="#0C4F70"/><path d="M0,52 C260,30 520,70 760,48 C1000,26 1220,62 1440,46 L1440,70 L0,70 Z" fill="#0C4F70" opacity="0.5"/></svg></div>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="../assets/logo-blanco.png" alt="Lavapopo" width="75" height="54">
+        <p style="margin:0;max-width:300px">Accesorio de higiene con agua para inodoro. Sin electricidad, instalación en 15 minutos.</p>
+      </div>
+      <div>
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="#how">Cómo se usa</a></li>
+          <li><a href="#features">Beneficios</a></li>
+          <li><a href="#specs">Especificaciones</a></li>
+          <li><a href="#tech">Ficha técnica</a></li>
+          <li><a href="#compat">Compatibilidad</a></li>
+          <li><a href="#pricing">Precios</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Atención</h4>
+        <ul>
+          <li><a href="https://wa.me/51951540663" target="_blank" rel="noopener">WhatsApp 951 540 663</a></li>
+          <li>Lun a Sáb · 9 am – 7 pm</li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#manualdeinstalacion">Manual de instalación</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Envíos y pagos</h4>
+        <ul>
+          <li>Envíos a todo el Perú</li>
+          <li>Pago contra entrega</li>
+          <li>Transferencia bancaria</li>
+          <li>Yape</li>
+          <li>Shalom · Marvisur</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lavapopo · Lima, Perú</span>
+      <span>El papel seca. El agua limpia.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/51951540663?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Lavapopo." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
 
 <script>
+  // Nav: borde al hacer scroll
+  (function () {
+    var nav = document.getElementById('mainNav');
+    function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 8); }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
 
-// Countdown
-function startCountdown() {
-  let end = +localStorage.getItem('lp_promo_end');
-  if (!end || isNaN(end) || end < Date.now()) {
-    end = Date.now() + 4 * 24 * 3600 * 1000;
-    try { localStorage.setItem('lp_promo_end', String(end)); } catch (e) {}
-  }
-  const pad = n => String(n).padStart(2, '0');
-  const tick = () => {
-    const diff = Math.max(0, end - Date.now());
-    document.getElementById('cdD').textContent = pad(Math.floor(diff / 86400000));
-    document.getElementById('cdH').textContent = pad(Math.floor((diff % 86400000) / 3600000));
-    document.getElementById('cdM').textContent = pad(Math.floor((diff % 3600000) / 60000));
-  };
-  tick();
-  setInterval(tick, 20000);
-}
-
-
-// MENU BURGER MOVIL
-var lpBurgerBtn = document.getElementById('burgerBtn');
-var lpMobileNav = document.getElementById('mobileNav');
-var lpMainNav = document.getElementById('mainNav');
-
-function lpShowMainNavOnly() {
-  if (!lpMainNav) return;
-
-  lpMainNav.style.transform = 'translateY(0)';
-  lpMainNav.style.opacity = '1';
-  lpMainNav.style.pointerEvents = 'auto';
-}
-
-function lpCloseMobileNav() {
-  if (!lpMobileNav) return;
-
-  lpMobileNav.style.display = 'none';
-}
-
-function lpOpenMobileNav() {
-  if (!lpMobileNav) return;
-
-  lpShowMainNavOnly();
-  lpMobileNav.style.display = 'block';
-}
-
-if (lpBurgerBtn && lpMobileNav && lpMainNav) {
-  lpBurgerBtn.addEventListener('click', function(event) {
-    event.preventDefault();
-    event.stopPropagation();
-
-    lpShowMainNavOnly();
-
-    if (lpMobileNav.style.display === 'block') {
-      lpCloseMobileNav();
-    } else {
-      lpOpenMobileNav();
+  // Menú móvil
+  (function () {
+    var btn = document.getElementById('burgerBtn');
+    var menu = document.getElementById('mobileNav');
+    if (!btn || !menu) return;
+    function setOpen(open) {
+      menu.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
     }
-  });
+    btn.addEventListener('click', function (e) { e.stopPropagation(); setOpen(!menu.classList.contains('open')); });
+    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target) && !btn.contains(e.target)) setOpen(false); });
+  })();
 
-  // Cierra el menú móvil al tocar cualquier opción
-  var lpMobileLinks = lpMobileNav.querySelectorAll('a');
-
-  lpMobileLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
-      lpCloseMobileNav();
-      lpShowMainNavOnly();
-    });
-  });
-
-  // Cierra el menú si haces clic fuera del menú
-  document.addEventListener('click', function(event) {
-    var clickedInsideMenu = lpMobileNav.contains(event.target);
-    var clickedBurger = lpBurgerBtn.contains(event.target);
-
-    if (!clickedInsideMenu && !clickedBurger) {
-      lpCloseMobileNav();
+  // Calculadora
+  (function () {
+    var fmt = function (n) { return 'S/ ' + Math.round(n).toLocaleString('es-PE'); };
+    var people = document.getElementById('peopleRange');
+    var rolls = document.getElementById('rollsRange');
+    var price = document.getElementById('priceRange');
+    function update() {
+      var p = +people.value, r = +rolls.value, pr = +price.value;
+      document.getElementById('peopleLabel').textContent = p + (p === 1 ? ' persona' : ' personas');
+      document.getElementById('rollsLabel').textContent = (Number.isInteger(r) ? r : r.toFixed(1)) + (r === 1 ? ' rollo' : ' rollos');
+      document.getElementById('priceLabel').textContent = 'S/ ' + pr.toFixed(2);
+      var annual = p * r * 52 * pr;
+      document.getElementById('annualLabel').textContent = fmt(annual);
+      document.getElementById('ahorroLabel').textContent = fmt(annual * 0.9);
+      document.getElementById('tenYearLabel').textContent = fmt(annual * 10);
     }
-  });
-}
+    [people, rolls, price].forEach(function (el) { el.addEventListener('input', update); });
+    update();
+  })();
 
-
-
-
-
-// Calculator
-const fmt = n => 'S/ ' + Math.round(n).toLocaleString('es-PE');
-function updateCalc() {
-  const people = +document.getElementById('peopleRange').value;
-  const rolls = +document.getElementById('rollsRange').value;
-  const price = +document.getElementById('priceRange').value;
-  
-  document.getElementById('peopleLabel').textContent = people + (people === 1 ? ' persona' : ' personas');
-  document.getElementById('rollsLabel').textContent = (Number.isInteger(rolls) ? rolls : rolls.toFixed(1)) + (rolls === 1 ? ' rollo' : ' rollos');
-  document.getElementById('priceLabel').textContent = 'S/ ' + price.toFixed(2);
-  
-  const annual = people * rolls * 52 * price;
-  const ahorro = annual * 0.9;
-
-  const tenYear = annual * 10;
-  
-  document.getElementById('annualLabel').textContent = fmt(annual);
-  document.getElementById('ahorroLabel').textContent = fmt(ahorro);
-
-
-
-  document.getElementById('tenYearLabel').textContent = fmt(tenYear);
-}
-
-document.getElementById('peopleRange').addEventListener('input', updateCalc);
-document.getElementById('rollsRange').addEventListener('input', updateCalc);
-document.getElementById('priceRange').addEventListener('input', updateCalc);
-
-
-// FAQ
-const faqData = [
-  {
-    q: '¿Para quién es el Lavapopo?',
-    a: 'Para todos: Lo pueden usar niños, ancianos, personas de todas las edades, personas con movilidad reducida, personas con dolencias, operaciones.'
-  },
-  {
-    q: '¿El popó cae en el Lavapopo?',
-    a: 'No. Lavapopo permanece debajo del asiento y no bloquea el interior de la taza. El popó cae directamente dentro del inodoro, como siempre. El dispositivo solo entra en acción cuando terminas y giras la perilla para iniciar la limpieza.'
-  },
-  {
-    q: 'Cuando terminas, ¿usas papel para secarte?',
-    a: 'Sí. Al terminar puedes usar un solo pedazo de papel higiénico para secar las gotas de agua que hayan quedado y comprobar que la limpieza está completa. Como el agua realiza la limpieza, necesitarás solo una pequeña cantidad de papel higiénico para secar las gotas que queden alrededor de la zona.'
-  },
-  {
-    q: '¿Usa electricidad o baterías?',
-    a: 'No. Lavapopo no utiliza electricidad, baterías ni cargadores. Funciona únicamente con la presión del agua de la conexión del inodoro. Si tu tanque se llena normalmente, Lavapopo está listo para funcionar.'
-  },
-  {
-    q: '¿Una mujer podría sufrir una infección porque el chorro llega hasta adelante?',
-    a: 'Lavapopo tiene una boquilla posterior y otra frontal, las cuales se activan de manera independiente. Para la limpieza posterior debe usarse únicamente la boquilla trasera, con una presión moderada. En el caso de las mujeres, es importante evitar dirigir agua desde la zona anal hacia la vagina. Usándolo correctamente, cada boquilla limpia solamente la zona para la cual fue diseñada. Una vez que lo uses te darás cuenta que el chorro pierde fuerza al chocar con el * y no salpica hacia ningún lado. Igualmente cuando las mujeres se lavan la parte frontal el agua cae directamente en la zona íntima '
-  },
-  {
-    q: '¿Salpica la taza o puede mojar mis piernas, ropa o el piso?',
-    a: 'No debería. Al estar sentado, tu cuerpo y la taza contienen el agua dentro del inodoro. La boquilla dirige el chorro hacia la zona de limpieza y ahí pierde fuerza al entrar en contacto con el cuerpo y el agua cae nuevamente dentro de la taza hacia abajo, no hacia los costados.'
-  },
-  {
-    q: '¿El agua fría es molesta cuando toca tu trasero?',
-    a: 'La primera vez puede sentirse fresca, especialmente en invierno, pero el contacto dura pocos segundos y normalmente uno se acostumbra muy rápido. Además, puedes abrir la perilla poco a poco para comenzar con un chorro suave. La mayoría de los usuarios deja de notar la temperatura después de los primeros usos.'
-  },
-  {
-    q: '¿Cómo se lava Lavapopo si se mancha?',
-    a: 'Puedes limpiarlo con un paño húmedo, agua y jabón suave. La boquilla también se enjuaga con agua limpia cada vez que se utiliza y permanece protegida cuando no está funcionando. Evita esponjas metálicas, productos abrasivos o químicos fuertes que puedan dañar el material.'
-  },
-  {
-    q: '¿Funciona con baja presión de agua?',
-    a: 'Sí, funciona con la presión habitual de la red de agua. Si tu inodoro llena el tanque con normalidad, Lavapopo debería funcionar correctamente. La intensidad del chorro se controla girando gradualmente la perilla.'
-  },
-  {
-    q: '¿Qué pasa si hay corte de agua?',
-    a: 'Lavapopo utiliza la misma conexión de agua que el inodoro. Durante un corte general no podrá funcionar, igual que el tanque del inodoro. Cuando regrese el suministro de agua, volverá a funcionar inmediatamente, sin electricidad, reinicios ni mantenimiento.'
-  },
-  {
-    q: '¿Y si me mudo, puedo llevármelo?',
-    a: 'Sí. La instalación es reversible y no requiere perforaciones ni modificaciones permanentes. Puedes desmontarlo, volver a conectar el inodoro como estaba y llevar Lavapopo a tu nueva vivienda para instalarlo nuevamente.'
-  },
-  {
-    q: '¿Necesito gasfitero?',
-    a: 'No. La caja incluye las piezas necesarias y un manual de instalación paso a paso. La instalación se realiza utilizando las conexiones existentes del inodoro, sin romper paredes ni hacer obras. Solo necesitas herramientas básicas.'
-  },
-  {
-    q: '¿Realmente llega a quitar todo el popó del trasero?',
-    a: 'Sí. El chorro de agua ayuda a desprender y retirar los residuos con mayor eficacia que el papel seco. Puedes regular la presión y mover ligeramente tu cuerpo, sin levantarte del asiento, para que el agua llegue a toda la zona necesaria. Al finalizar, usa un poco de papel únicamente para secarte y verificar la limpieza. El papel que pases saldrá unicamente con agua sin residuos de popó'
-  }
-];
-
-
-
-function renderFAQ() {
-  const container = document.getElementById('faqContainer');
-  faqData.forEach((item, i) => {
-    const div = document.createElement('div');
-    div.style.cssText = 'background:#FAF6EE;border-radius:16px;border:1px solid rgba(15,34,39,0.06);overflow:hidden';
-    
-    const btn = document.createElement('button');
-    btn.style.cssText = 'width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:Montserrat,sans-serif;font-weight:700;font-size:17px;color:#0F2227';
-    btn.innerHTML = item.q + '<span style="color:#0BA9C2;font-size:22px;flex:none">+</span>';
-    
-    const ansDiv = document.createElement('div');
-    ansDiv.style.cssText = 'padding:0 24px 24px;font-size:16px;line-height:1.6;color:#4a5a5e;display:none';
-    ansDiv.textContent = item.a;
-    
-    btn.addEventListener('click', function() {
-      const isOpen = ansDiv.style.display === 'block';
-      ansDiv.style.display = isOpen ? 'none' : 'block';
-      btn.querySelector('span').textContent = isOpen ? '+' : '–';
-    });
-    
-    div.appendChild(btn);
-    div.appendChild(ansDiv);
-    container.appendChild(div);
-  });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  updateCalc();
-  renderFAQ();
-});
-</script>
-
-
-<script>
-  const mainNav = document.getElementById("mainNav");
-
-  let lastScrollY = window.scrollY;
-  let lastMouseY = null;
-
-  function showMenu() {
-    mainNav.style.transform = "translateY(0)";
-    mainNav.style.opacity = "1";
-  }
-
-  function hideMenu() {
-    mainNav.style.transform = "translateY(-100%)";
-    mainNav.style.opacity = "0";
-  }
-
-  window.addEventListener("scroll", function () {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY <= 10) {
-      showMenu();
-    } else if (currentScrollY > lastScrollY) {
-      hideMenu();
-    } else if (currentScrollY < lastScrollY) {
-      showMenu();
-    }
-
-    lastScrollY = currentScrollY;
-  });
-
-  window.addEventListener("mousemove", function (event) {
-    const currentMouseY = event.clientY;
-
-    if (lastMouseY !== null) {
-      const difference = lastMouseY - currentMouseY;
-
-      if (difference > 8) {
-        showMenu();
-      }
-    }
-
-    lastMouseY = currentMouseY;
-  });
-</script>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const departamentoSelect = document.getElementById("departamentoSelect");
-
-    if (!departamentoSelect) return;
-
-    const departamentos = [
-      { id: "01", name: "Amazonas" },
-      { id: "02", name: "Áncash" },
-      { id: "03", name: "Apurímac" },
-      { id: "04", name: "Arequipa" },
-      { id: "05", name: "Ayacucho" },
-      { id: "06", name: "Cajamarca" },
-      { id: "07", name: "Callao" },
-      { id: "08", name: "Cusco" },
-      { id: "09", name: "Huancavelica" },
-      { id: "10", name: "Huánuco" },
-      { id: "11", name: "Ica" },
-      { id: "12", name: "Junín" },
-      { id: "13", name: "La Libertad" },
-      { id: "14", name: "Lambayeque" },
-      { id: "15", name: "Lima" },
-      { id: "16", name: "Loreto" },
-      { id: "17", name: "Madre de Dios" },
-      { id: "18", name: "Moquegua" },
-      { id: "19", name: "Pasco" },
-      { id: "20", name: "Piura" },
-      { id: "21", name: "Puno" },
-      { id: "22", name: "San Martín" },
-      { id: "23", name: "Tacna" },
-      { id: "24", name: "Tumbes" },
-      { id: "25", name: "Ucayali" }
+  // Preguntas frecuentes
+  (function () {
+    var faq = [
+      { q: '¿Para quién es Lavapopo?',
+        a: 'Para toda la familia: niños, adultos y adultos mayores. También es una ayuda práctica para personas con movilidad reducida, porque la limpieza se hace sin necesidad de usar las manos.' },
+      { q: '¿El dispositivo queda expuesto durante el uso del inodoro?',
+        a: 'No. Lavapopo permanece debajo del asiento y no invade el interior de la taza, por lo que no entra en contacto con los residuos. Solo entra en acción cuando terminas y abres la perilla.' },
+      { q: '¿Es necesario usar papel después?',
+        a: 'Solo un poco, para secar. El agua realiza la limpieza y basta con un trozo de papel para secar las gotas que queden y comprobar que la limpieza es completa.' },
+      { q: '¿Usa electricidad o baterías?',
+        a: 'No. Funciona únicamente con la presión del agua de la conexión del inodoro. Si tu tanque se llena con normalidad, Lavapopo está listo para usarse.' },
+      { q: '¿Es adecuado para la higiene femenina?',
+        a: 'Sí. Lavapopo tiene una boquilla posterior y otra frontal que se activan de forma independiente. Para la limpieza posterior debe usarse solo la boquilla trasera, con presión moderada, evitando dirigir el agua desde la zona anal hacia la zona íntima. Usado correctamente, cada boquilla limpia únicamente la zona para la que fue diseñada.' },
+      { q: '¿Salpica o puede mojar la ropa o el piso?',
+        a: 'No debería. Al estar sentado, el cuerpo y la taza contienen el agua dentro del inodoro. El chorro pierde fuerza al hacer contacto y el agua cae hacia abajo, no hacia los costados.' },
+      { q: '¿El agua fría resulta incómoda?',
+        a: 'La primera vez puede sentirse fresca, sobre todo en invierno, pero el contacto dura pocos segundos. Puedes abrir la perilla de a poco para empezar con un chorro suave. La mayoría de usuarios deja de notar la temperatura tras los primeros usos.' },
+      { q: '¿Cómo se limpia el dispositivo?',
+        a: 'Con un paño húmedo, agua y jabón suave. La boquilla se enjuaga con agua limpia en cada uso y queda protegida cuando no funciona. Evita esponjas metálicas, abrasivos o químicos fuertes.' },
+      { q: '¿Funciona con baja presión de agua?',
+        a: 'Funciona con la presión habitual de la red. Si tu inodoro llena el tanque con normalidad, Lavapopo funcionará correctamente. La intensidad del chorro se regula con la perilla.' },
+      { q: '¿Qué pasa si hay un corte de agua?',
+        a: 'Lavapopo usa la misma conexión que el inodoro, así que durante un corte no funcionará, igual que el tanque. Cuando vuelva el suministro, funcionará de inmediato, sin reinicios ni mantenimiento.' },
+      { q: 'Si me mudo, ¿puedo llevármelo?',
+        a: 'Sí. La instalación es reversible y no requiere perforaciones. Puedes desmontarlo, dejar el inodoro como estaba e instalarlo en tu nueva vivienda.' },
+      { q: '¿Necesito un gasfitero?',
+        a: 'No. La caja incluye todas las piezas y un manual paso a paso. Se instala usando las conexiones existentes del inodoro, con herramientas básicas.' },
+      { q: '¿Realmente limpia por completo?',
+        a: 'Sí. El chorro de agua retira los residuos con mayor eficacia que el papel seco. Puedes regular la presión y ajustar ligeramente tu posición para que el agua llegue a toda la zona. Al terminar, el papel solo sirve para secar.' }
     ];
-
-    departamentos.forEach(function (departamento) {
-      const option = document.createElement("option");
-      option.value = departamento.name;
-      option.textContent = departamento.name;
-      departamentoSelect.appendChild(option);
+    var c = document.getElementById('faqContainer');
+    faq.forEach(function (item) {
+      var d = document.createElement('details');
+      var s = document.createElement('summary');
+      var t = document.createElement('span'); t.textContent = item.q;
+      var plus = document.createElement('span'); plus.className = 'plus'; plus.setAttribute('aria-hidden', 'true');
+      s.appendChild(t); s.appendChild(plus);
+      var a = document.createElement('div'); a.className = 'answer';
+      var p = document.createElement('p'); p.textContent = item.a; a.appendChild(p);
+      d.appendChild(s); d.appendChild(a); c.appendChild(d);
     });
-  });
-</script>
+  })();
 
-<script>
-  const whatsappFormularioBtn = document.getElementById('whatsappFormularioBtn');
+  // Departamentos
+  (function () {
+    var sel = document.getElementById('departamentoSelect');
+    ['Amazonas','Áncash','Apurímac','Arequipa','Ayacucho','Cajamarca','Callao','Cusco','Huancavelica','Huánuco','Ica','Junín','La Libertad','Lambayeque','Lima','Loreto','Madre de Dios','Moquegua','Pasco','Piura','Puno','San Martín','Tacna','Tumbes','Ucayali']
+      .forEach(function (n) { var o = document.createElement('option'); o.value = n; o.textContent = n; sel.appendChild(o); });
+  })();
 
-  if (whatsappFormularioBtn) {
-    whatsappFormularioBtn.addEventListener('click', function(event) {
-      event.preventDefault();
-
-      const cliente = document.getElementById('clienteInput')?.value.trim() || '';
-      const telefono = document.getElementById('telefonoInput')?.value.trim() || '';
-      const departamento = document.getElementById('departamentoSelect')?.value.trim() || '';
-      const ciudad = document.getElementById('ciudadInput')?.value.trim() || '';
-      const cuentanos = document.getElementById('cuentanosInput')?.value.trim() || '';
-
-      const mensaje =
-        'Hola Lavapopo, quiero información sobre el producto.' + '\n\n' +
-        'Cliente: ' + cliente + '\n' +
-        'Teléfono: ' + telefono + '\n' +
-        'Departamento: ' + departamento + '\n' +
-        'Ciudad: ' + ciudad + '\n' +
-        'Cuéntanos: ' + cuentanos;
-
-      const url = 'https://wa.me/51951540663?text=' + encodeURIComponent(mensaje);
-
-      window.open(url, '_blank', 'noopener,noreferrer');
+  // Formulario → WhatsApp
+  (function () {
+    var form = document.getElementById('contactForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+      var mensaje = 'Hola Lavapopo, quiero información sobre el producto.\n\n' +
+        'Cliente: ' + v('clienteInput') + '\n' +
+        'Teléfono: ' + v('telefonoInput') + '\n' +
+        'Departamento: ' + v('departamentoSelect') + '\n' +
+        'Ciudad: ' + v('ciudadInput') + '\n' +
+        'Consulta: ' + v('cuentanosInput');
+      window.open('https://wa.me/51951540663?text=' + encodeURIComponent(mensaje), '_blank', 'noopener,noreferrer');
     });
-  }
-</script>
+  })();
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const videoHorizontal = "GaXWAk8VaTc";
-    const videoVertical = "fPA0UUBBNtw";
-
-    const iframe = document.getElementById("manualVideo");
-    const container = document.getElementById("manualVideoContainer");
-
-    function cargarVideoCorrecto() {
-      const esMovil = window.matchMedia("(max-width: 768px)").matches;
-
-      const videoId = esMovil ? videoVertical : videoHorizontal;
-      const nuevaUrl = `https://www.youtube.com/embed/${videoId}?rel=0`;
-
-      container.style.aspectRatio = esMovil ? "9 / 16" : "16 / 9";
-
-      if (iframe.getAttribute("src") !== nuevaUrl) {
-        iframe.setAttribute("src", nuevaUrl);
-      }
+  // Video: horizontal en escritorio, vertical en móvil
+  (function () {
+    var horizontal = 'GaXWAk8VaTc', vertical = 'fPA0UUBBNtw';
+    var iframe = document.getElementById('manualVideo');
+    var box = document.getElementById('manualVideoContainer');
+    function load() {
+      var mobile = window.matchMedia('(max-width: 768px)').matches;
+      var url = 'https://www.youtube.com/embed/' + (mobile ? vertical : horizontal) + '?rel=0';
+      box.style.aspectRatio = mobile ? '9 / 16' : '16 / 9';
+      if (iframe.getAttribute('src') !== url) iframe.setAttribute('src', url);
     }
-
-    cargarVideoCorrecto();
-
-    window.addEventListener("resize", cargarVideoCorrecto);
-  });
+    load();
+    window.addEventListener('resize', load);
+  })();
 </script>
-
 
 </body>
 </html>
